@@ -1,12 +1,4 @@
 import { ImageIcon } from "lucide-react";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-import Autoplay from "embla-carousel-autoplay";
 import carinhoso from "@/assets/imagens_webp/carinhoso.webp";
 import dente from "@/assets/imagens_webp/dente_site.webp";
 import djMc from "@/assets/imagens_webp/dj_mc_site.webp";
@@ -94,49 +86,41 @@ const Portfolio = () => {
 
   interface PortfolioRowProps {
     items: typeof portfolioItems;
+    direction?: 'left' | 'right';
   }
 
-  const PortfolioRow = ({ items }: PortfolioRowProps) => (
-    <div className="relative w-full py-4 group">
-      <Carousel
-        opts={{ loop: true, align: "start" }}
-        plugins={[
-          Autoplay({
-            delay: 3000,
-            stopOnInteraction: true,
-            stopOnMouseEnter: true,
-          }),
-        ]}
-        className="w-full"
+  const PortfolioRow = ({ items, direction = 'left' }: PortfolioRowProps) => (
+    <div className="relative overflow-hidden py-2">
+      <div 
+        className={`flex gap-4 ${direction === 'left' ? 'animate-scroll-left' : 'animate-scroll-right'} hover:[animation-play-state:paused]`}
+        style={{ width: 'fit-content' }}
       >
-        <CarouselContent className="-ml-2 md:-ml-4">
-          {items.map((item, index) => (
-            <CarouselItem key={index} className="pl-2 md:pl-4 basis-[140px] md:basis-[180px]">
-              <div className="relative bg-card rounded-xl overflow-hidden border border-primary/20 shadow-card hover:shadow-glow transition-all duration-300 hover:scale-105">
-                <div className="aspect-[2/3] overflow-hidden bg-gradient-to-br from-card to-black">
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    loading="lazy"
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                </div>
-                
-                <div className="p-2 space-y-1 bg-black/80 backdrop-blur-sm">
-                  <h3 className="text-xs font-bold group-hover:text-primary transition-colors line-clamp-1">
-                    {item.title}
-                  </h3>
-                  <p className="text-[10px] text-gray-400 line-clamp-1">
-                    {item.description}
-                  </p>
-                </div>
-              </div>
-            </CarouselItem>
-          ))}
-        </CarouselContent>
-        <CarouselPrevious className="left-2 opacity-0 group-hover:opacity-100 transition-opacity" />
-        <CarouselNext className="right-2 opacity-0 group-hover:opacity-100 transition-opacity" />
-      </Carousel>
+        {/* Duplicate items 3 times for seamless infinite loop */}
+        {[...items, ...items, ...items].map((item, index) => (
+          <div
+            key={index}
+            className="group relative flex-shrink-0 w-[140px] md:w-[180px] bg-card rounded-xl overflow-hidden border border-primary/20 shadow-card hover:shadow-glow transition-all duration-300 hover:scale-105"
+          >
+            <div className="aspect-[2/3] overflow-hidden bg-gradient-to-br from-card to-black">
+              <img
+                src={item.image}
+                alt={item.title}
+                loading="lazy"
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              />
+            </div>
+            
+            <div className="p-2 space-y-1 bg-black/80 backdrop-blur-sm">
+              <h3 className="text-xs font-bold group-hover:text-primary transition-colors line-clamp-1">
+                {item.title}
+              </h3>
+              <p className="text-[10px] text-gray-400 line-clamp-1">
+                {item.description}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 
@@ -167,10 +151,10 @@ const Portfolio = () => {
 
         {/* Scrolling Rows */}
         <div className="space-y-0">
-          <PortfolioRow items={row1} />
-          <PortfolioRow items={row2} />
-          <PortfolioRow items={row3} />
-          <PortfolioRow items={row4} />
+          <PortfolioRow items={row1} direction="left" />
+          <PortfolioRow items={row2} direction="right" />
+          <PortfolioRow items={row3} direction="left" />
+          <PortfolioRow items={row4} direction="right" />
         </div>
       </div>
     </section>
