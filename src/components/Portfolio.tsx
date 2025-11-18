@@ -90,18 +90,18 @@ const Portfolio = () => {
   }
 
   const PortfolioRow = ({ items, direction = 'left' }: PortfolioRowProps) => (
-    <div className="relative overflow-hidden py-4">
+    <div className="relative overflow-hidden py-2">
       <div 
-        className={`flex gap-4 ${direction === 'left' ? 'animate-scroll-left' : 'animate-scroll-right'}`}
+        className={`flex gap-4 ${direction === 'left' ? 'animate-scroll-left' : 'animate-scroll-right'} hover:[animation-play-state:paused]`}
         style={{ width: 'fit-content' }}
       >
         {/* Duplicate items 3 times for seamless infinite loop */}
         {[...items, ...items, ...items].map((item, index) => (
           <div
             key={index}
-            className="group relative flex-shrink-0 w-[200px] md:w-[250px] bg-card rounded-xl overflow-hidden border border-primary/20 shadow-card hover:shadow-glow transition-all duration-300 hover:scale-105"
+            className="group relative flex-shrink-0 w-[140px] md:w-[180px] bg-card rounded-xl overflow-hidden border border-primary/20 shadow-card hover:shadow-glow transition-all duration-300 hover:scale-105"
           >
-            <div className="aspect-[3/4] overflow-hidden bg-gradient-to-br from-card to-black">
+            <div className="aspect-square overflow-hidden bg-gradient-to-br from-card to-black">
               <img
                 src={item.image}
                 alt={item.title}
@@ -110,11 +110,11 @@ const Portfolio = () => {
               />
             </div>
             
-            <div className="p-3 space-y-1 bg-black/80 backdrop-blur-sm">
-              <h3 className="text-sm font-bold group-hover:text-primary transition-colors line-clamp-1">
+            <div className="p-2 space-y-1 bg-black/80 backdrop-blur-sm">
+              <h3 className="text-xs font-bold group-hover:text-primary transition-colors line-clamp-1">
                 {item.title}
               </h3>
-              <p className="text-xs text-gray-400 line-clamp-1">
+              <p className="text-[10px] text-gray-400 line-clamp-1">
                 {item.description}
               </p>
             </div>
