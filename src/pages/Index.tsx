@@ -1,7 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
-import Products from "@/components/Products";
 import Portfolio from "@/components/Portfolio";
 import FAQ from "@/components/FAQ";
 import Contact from "@/components/Contact";
@@ -14,7 +13,6 @@ const Index = () => {
       <Hero />
       <About />
       <Portfolio />
-      <Products />
       <FAQ />
       <Contact generatedImage={null} />
       <Footer />
