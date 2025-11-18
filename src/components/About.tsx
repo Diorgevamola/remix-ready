@@ -4,6 +4,9 @@ import rodrigoPuppets from "@/assets/imagens_webp/rodrigo-puppets.webp";
 const About = () => {
   return (
     <section id="about" className="py-12 md:py-16 lg:py-20 relative overflow-hidden scroll-mt-20">
+      {/* Gradient Transition from Hero */}
+      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-background/0 via-background/50 to-background pointer-events-none -mt-16" />
+      
       {/* Background Effects */}
       <div className="absolute top-1/4 right-0 w-96 h-96 bg-accent/10 rounded-full blur-[100px]" />
       
