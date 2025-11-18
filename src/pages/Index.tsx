@@ -29,7 +29,7 @@ const Index = () => {
               Entre em contato e transforme sua ideia em um personagem único e inesquecível
             </p>
             <button
-              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() => window.open('https://wa.me/5511957761009', '_blank')}
               className="group relative inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-primary to-secondary rounded-full font-bold text-lg shadow-[0_0_30px_rgba(250,69,140,0.5)] hover:shadow-[0_0_50px_rgba(250,69,140,0.8)] transition-all duration-300 hover:scale-105"
             >
               <span>Solicitar Orçamento</span>
