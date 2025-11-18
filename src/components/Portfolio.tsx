@@ -144,8 +144,9 @@ const Portfolio = () => {
         {/* Left Arrow */}
         <button
           onClick={() => handleScroll('left')}
-          className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-black/60 hover:bg-black/80 backdrop-blur-sm border border-primary/30 rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          className="absolute left-4 top-1/2 -translate-y-1/2 z-50 bg-black/80 hover:bg-black/95 backdrop-blur-sm border border-primary/50 rounded-full p-3 opacity-0 group-hover:opacity-100 transition-all duration-300 cursor-pointer shadow-xl hover:scale-110"
           aria-label="Scroll left"
+          type="button"
         >
           <ChevronLeft className="w-6 h-6 text-primary" />
         </button>
@@ -153,8 +154,9 @@ const Portfolio = () => {
         {/* Right Arrow */}
         <button
           onClick={() => handleScroll('right')}
-          className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-black/60 hover:bg-black/80 backdrop-blur-sm border border-primary/30 rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          className="absolute right-4 top-1/2 -translate-y-1/2 z-50 bg-black/80 hover:bg-black/95 backdrop-blur-sm border border-primary/50 rounded-full p-3 opacity-0 group-hover:opacity-100 transition-all duration-300 cursor-pointer shadow-xl hover:scale-110"
           aria-label="Scroll right"
+          type="button"
         >
           <ChevronRight className="w-6 h-6 text-primary" />
         </button>
