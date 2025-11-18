@@ -8,7 +8,7 @@ const Hero = () => {
       behavior: "smooth"
     });
   };
-  return <section className="relative min-h-[calc(100vh-4rem)] sm:min-h-screen flex items-center justify-center overflow-hidden pt-14 sm:pt-24 pb-6 sm:pb-16 md:pt-28 md:pb-20">
+  return <section className="relative min-h-[calc(100vh-4rem)] sm:min-h-screen flex items-center justify-center overflow-hidden pt-16 sm:pt-24 pb-6 sm:pb-16 md:pt-28 md:pb-20">
       {/* Gradient Background */}
       <div className="absolute inset-0 bg-[image:var(--gradient-hero)]" />
 
