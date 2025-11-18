@@ -101,7 +101,7 @@ const Portfolio = () => {
             key={index}
             className="group relative flex-shrink-0 w-[140px] md:w-[180px] bg-card rounded-xl overflow-hidden border border-primary/20 shadow-card hover:shadow-glow transition-all duration-300 hover:scale-105"
           >
-            <div className="aspect-square overflow-hidden bg-gradient-to-br from-card to-black">
+            <div className="aspect-[2/3] overflow-hidden bg-gradient-to-br from-card to-black">
               <img
                 src={item.image}
                 alt={item.title}
