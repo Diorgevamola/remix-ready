@@ -276,8 +276,11 @@ const Portfolio = () => {
         {/* Scrolling Rows */}
         <div className="space-y-0">
           <PortfolioRow items={row1} direction="left" />
+          <div className="h-4 bg-gradient-to-b from-transparent via-primary/5 to-transparent" />
           <PortfolioRow items={row2} direction="right" />
+          <div className="h-4 bg-gradient-to-b from-transparent via-secondary/5 to-transparent" />
           <PortfolioRow items={row3} direction="left" />
+          <div className="h-4 bg-gradient-to-b from-transparent via-primary/5 to-transparent" />
           <PortfolioRow items={row4} direction="right" />
         </div>
       </div>
