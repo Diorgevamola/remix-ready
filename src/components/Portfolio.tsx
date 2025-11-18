@@ -1,4 +1,5 @@
-import { ImageIcon } from "lucide-react";
+import { ImageIcon, ChevronLeft, ChevronRight } from "lucide-react";
+import { useState, useRef } from "react";
 import carinhoso from "@/assets/imagens_webp/carinhoso.webp";
 import dente from "@/assets/imagens_webp/dente_site.webp";
 import djMc from "@/assets/imagens_webp/dj_mc_site.webp";
@@ -89,40 +90,84 @@ const Portfolio = () => {
     direction?: 'left' | 'right';
   }
 
-  const PortfolioRow = ({ items, direction = 'left' }: PortfolioRowProps) => (
-    <div className="relative overflow-hidden py-2">
-      <div 
-        className={`flex gap-4 ${direction === 'left' ? 'animate-scroll-left' : 'animate-scroll-right'} hover:[animation-play-state:paused]`}
-        style={{ width: 'fit-content' }}
-      >
-        {/* Duplicate items 3 times for seamless infinite loop */}
-        {[...items, ...items, ...items].map((item, index) => (
-          <div
-            key={index}
-            className="group relative flex-shrink-0 w-[140px] md:w-[180px] bg-card rounded-xl overflow-hidden border border-primary/20 shadow-card hover:shadow-glow transition-all duration-300 hover:scale-105"
+  const PortfolioRow = ({ items, direction = 'left' }: PortfolioRowProps) => {
+    const scrollRef = useRef<HTMLDivElement>(null);
+    const [isPaused, setIsPaused] = useState(false);
+
+    const handleScroll = (scrollDirection: 'left' | 'right') => {
+      if (scrollRef.current) {
+        const scrollAmount = 600;
+        const newPosition = scrollDirection === 'left' 
+          ? scrollRef.current.scrollLeft - scrollAmount
+          : scrollRef.current.scrollLeft + scrollAmount;
+        
+        scrollRef.current.scrollTo({
+          left: newPosition,
+          behavior: 'smooth'
+        });
+      }
+    };
+
+    return (
+      <div className="relative overflow-hidden py-2 group">
+        {/* Left Arrow */}
+        <button
+          onClick={() => handleScroll('left')}
+          className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-black/60 hover:bg-black/80 backdrop-blur-sm border border-primary/30 rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          aria-label="Scroll left"
+        >
+          <ChevronLeft className="w-6 h-6 text-primary" />
+        </button>
+
+        {/* Right Arrow */}
+        <button
+          onClick={() => handleScroll('right')}
+          className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-black/60 hover:bg-black/80 backdrop-blur-sm border border-primary/30 rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          aria-label="Scroll right"
+        >
+          <ChevronRight className="w-6 h-6 text-primary" />
+        </button>
+
+        <div 
+          ref={scrollRef}
+          className="overflow-x-auto scrollbar-hide"
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+        >
+          <div 
+            className={`flex gap-4 ${!isPaused ? (direction === 'left' ? 'animate-scroll-left' : 'animate-scroll-right') : ''}`}
+            style={{ width: 'fit-content' }}
           >
-            <div className="aspect-[2/3] overflow-hidden bg-gradient-to-br from-card to-black">
-              <img
-                src={item.image}
-                alt={item.title}
-                loading="lazy"
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-              />
-            </div>
-            
-            <div className="p-2 space-y-1 bg-black/80 backdrop-blur-sm">
-              <h3 className="text-xs font-bold group-hover:text-primary transition-colors line-clamp-1">
-                {item.title}
-              </h3>
-              <p className="text-[10px] text-gray-400 line-clamp-1">
-                {item.description}
-              </p>
-            </div>
+            {/* Duplicate items 3 times for seamless infinite loop */}
+            {[...items, ...items, ...items].map((item, index) => (
+              <div
+                key={index}
+                className="group/item relative flex-shrink-0 w-[140px] md:w-[180px] bg-card rounded-xl overflow-hidden border border-primary/20 shadow-card hover:shadow-glow transition-all duration-300 hover:scale-105"
+              >
+                <div className="aspect-[2/3] overflow-hidden bg-gradient-to-br from-card to-black">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    loading="lazy"
+                    className="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-500"
+                  />
+                </div>
+                
+                <div className="p-2 space-y-1 bg-black/80 backdrop-blur-sm">
+                  <h3 className="text-xs font-bold group-hover/item:text-primary transition-colors line-clamp-1">
+                    {item.title}
+                  </h3>
+                  <p className="text-[10px] text-gray-400 line-clamp-1">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
-        ))}
+        </div>
       </div>
-    </div>
-  );
+    );
+  };
 
   return (
     <section id="portfolio" className="py-16 md:py-24 relative overflow-hidden bg-black scroll-mt-20">
