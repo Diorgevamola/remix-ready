@@ -94,15 +94,14 @@ const Portfolio = () => {
     const scrollRef = useRef<HTMLDivElement>(null);
     const [isPaused, setIsPaused] = useState(false);
     const pauseTimeoutRef = useRef<NodeJS.Timeout | null>(null);
-    const isUserInteractingRef = useRef(false);
 
     // Auto-scroll with JavaScript
     useEffect(() => {
       if (isPaused || !scrollRef.current) return;
 
-      const scrollSpeed = 0.5; // pixels per frame (slower = more smooth)
+      const scrollSpeed = 0.5;
       const scrollInterval = setInterval(() => {
-        if (scrollRef.current && !isUserInteractingRef.current) {
+        if (scrollRef.current) {
           const scrollAmount = direction === 'left' ? scrollSpeed : -scrollSpeed;
           scrollRef.current.scrollLeft += scrollAmount;
 
@@ -114,12 +113,12 @@ const Portfolio = () => {
             scrollRef.current.scrollLeft = maxScroll;
           }
         }
-      }, 16); // ~60fps
+      }, 16);
 
       return () => clearInterval(scrollInterval);
     }, [isPaused, direction]);
 
-    // Initialize scroll position in the middle (second set of items)
+    // Initialize scroll position in the middle
     useEffect(() => {
       if (scrollRef.current) {
         const maxScroll = scrollRef.current.scrollWidth / 3;
@@ -127,66 +126,45 @@ const Portfolio = () => {
       }
     }, []);
 
-    // Detect manual user interaction (drag, scroll wheel)
+    // Detect drag interaction
     useEffect(() => {
       const scrollContainer = scrollRef.current;
       if (!scrollContainer) return;
 
-      let isScrolling = false;
-      let scrollTimeout: NodeJS.Timeout;
+      let dragTimeout: NodeJS.Timeout;
 
-      const handleUserScroll = () => {
-        if (!isUserInteractingRef.current) {
-          // User started manual interaction
-          isUserInteractingRef.current = true;
-          setIsPaused(true);
-        }
+      const handleDragStart = () => {
+        setIsPaused(true);
+        clearTimeout(dragTimeout);
+      };
 
-        // Clear existing timeout
-        clearTimeout(scrollTimeout);
-        
-        // Set timeout to detect end of interaction
-        scrollTimeout = setTimeout(() => {
-          isUserInteractingRef.current = false;
+      const handleDragEnd = () => {
+        clearTimeout(dragTimeout);
+        dragTimeout = setTimeout(() => {
           setIsPaused(false);
         }, 2000);
       };
 
-      const handleMouseDown = () => {
-        isUserInteractingRef.current = true;
-        setIsPaused(true);
-      };
-
-      const handleMouseUp = () => {
-        setTimeout(() => {
-          isUserInteractingRef.current = false;
-          setIsPaused(false);
-        }, 1500);
-      };
-
-      scrollContainer.addEventListener('scroll', handleUserScroll);
-      scrollContainer.addEventListener('mousedown', handleMouseDown);
-      scrollContainer.addEventListener('mouseup', handleMouseUp);
-      scrollContainer.addEventListener('touchstart', handleMouseDown);
-      scrollContainer.addEventListener('touchend', handleMouseUp);
+      scrollContainer.addEventListener('mousedown', handleDragStart);
+      scrollContainer.addEventListener('mouseup', handleDragEnd);
+      scrollContainer.addEventListener('mouseleave', handleDragEnd);
+      scrollContainer.addEventListener('touchstart', handleDragStart);
+      scrollContainer.addEventListener('touchend', handleDragEnd);
 
       return () => {
-        clearTimeout(scrollTimeout);
-        scrollContainer.removeEventListener('scroll', handleUserScroll);
-        scrollContainer.removeEventListener('mousedown', handleMouseDown);
-        scrollContainer.removeEventListener('mouseup', handleMouseUp);
-        scrollContainer.removeEventListener('touchstart', handleMouseDown);
-        scrollContainer.removeEventListener('touchend', handleMouseUp);
+        clearTimeout(dragTimeout);
+        scrollContainer.removeEventListener('mousedown', handleDragStart);
+        scrollContainer.removeEventListener('mouseup', handleDragEnd);
+        scrollContainer.removeEventListener('mouseleave', handleDragEnd);
+        scrollContainer.removeEventListener('touchstart', handleDragStart);
+        scrollContainer.removeEventListener('touchend', handleDragEnd);
       };
     }, []);
 
     const handleScroll = (scrollDirection: 'left' | 'right') => {
       if (scrollRef.current) {
-        // Mark as user interaction
-        isUserInteractingRef.current = true;
         setIsPaused(true);
         
-        // Clear any existing timeout
         if (pauseTimeoutRef.current) {
           clearTimeout(pauseTimeoutRef.current);
         }
@@ -201,9 +179,7 @@ const Portfolio = () => {
           behavior: 'smooth'
         });
 
-        // Resume auto-scroll after 2 seconds
         pauseTimeoutRef.current = setTimeout(() => {
-          isUserInteractingRef.current = false;
           setIsPaused(false);
         }, 2000);
       }
