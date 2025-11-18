@@ -30,7 +30,10 @@ const Navbar = () => {
       });
     }
   };
-  return <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-background/95 backdrop-blur-md shadow-lg" : "bg-transparent"}`}>
+  return <>
+    {/* Pink top bar like original site */}
+    <div className="fixed top-0 left-0 right-0 h-1 bg-primary z-[60]" />
+    <nav className={`fixed top-1 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? "bg-black/95 backdrop-blur-md shadow-lg border-b border-primary/20" : "bg-black/90"}`}>
       <div className="container mx-auto px-4 py-2 md:py-3">
         <div className="flex items-center justify-between">
           {/* Logo */}
@@ -81,6 +84,7 @@ const Navbar = () => {
             </div>
           </div>}
       </div>
-    </nav>;
+    </nav>
+  </>;
 };
 export default Navbar;
