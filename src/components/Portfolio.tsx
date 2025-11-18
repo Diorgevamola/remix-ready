@@ -93,6 +93,7 @@ const Portfolio = () => {
   const PortfolioRow = ({ items, direction = 'left' }: PortfolioRowProps) => {
     const scrollRef = useRef<HTMLDivElement>(null);
     const [isPaused, setIsPaused] = useState(false);
+    const pauseTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
     // Auto-scroll with JavaScript
     useEffect(() => {
@@ -127,7 +128,15 @@ const Portfolio = () => {
 
     const handleScroll = (scrollDirection: 'left' | 'right') => {
       if (scrollRef.current) {
-        const scrollAmount = 800; // Increased for more visible scroll
+        // Pause auto-scroll temporarily
+        setIsPaused(true);
+        
+        // Clear any existing timeout
+        if (pauseTimeoutRef.current) {
+          clearTimeout(pauseTimeoutRef.current);
+        }
+
+        const scrollAmount = 800;
         const newPosition = scrollDirection === 'left' 
           ? scrollRef.current.scrollLeft - scrollAmount
           : scrollRef.current.scrollLeft + scrollAmount;
@@ -136,6 +145,11 @@ const Portfolio = () => {
           left: newPosition,
           behavior: 'smooth'
         });
+
+        // Resume auto-scroll after 2 seconds
+        pauseTimeoutRef.current = setTimeout(() => {
+          setIsPaused(false);
+        }, 2000);
       }
     };
 
