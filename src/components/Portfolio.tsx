@@ -1,5 +1,5 @@
 import { ImageIcon, ChevronLeft, ChevronRight } from "lucide-react";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import carinhoso from "@/assets/imagens_webp/carinhoso.webp";
 import dente from "@/assets/imagens_webp/dente_site.webp";
 import djMc from "@/assets/imagens_webp/dj_mc_site.webp";
@@ -94,9 +94,40 @@ const Portfolio = () => {
     const scrollRef = useRef<HTMLDivElement>(null);
     const [isPaused, setIsPaused] = useState(false);
 
+    // Auto-scroll with JavaScript
+    useEffect(() => {
+      if (isPaused || !scrollRef.current) return;
+
+      const scrollSpeed = 0.5; // pixels per frame (slower = more smooth)
+      const scrollInterval = setInterval(() => {
+        if (scrollRef.current) {
+          const scrollAmount = direction === 'left' ? scrollSpeed : -scrollSpeed;
+          scrollRef.current.scrollLeft += scrollAmount;
+
+          // Seamless infinite loop reset
+          const maxScroll = scrollRef.current.scrollWidth / 3;
+          if (scrollRef.current.scrollLeft >= maxScroll * 2) {
+            scrollRef.current.scrollLeft = maxScroll;
+          } else if (scrollRef.current.scrollLeft <= 0) {
+            scrollRef.current.scrollLeft = maxScroll;
+          }
+        }
+      }, 16); // ~60fps
+
+      return () => clearInterval(scrollInterval);
+    }, [isPaused, direction]);
+
+    // Initialize scroll position in the middle (second set of items)
+    useEffect(() => {
+      if (scrollRef.current) {
+        const maxScroll = scrollRef.current.scrollWidth / 3;
+        scrollRef.current.scrollLeft = maxScroll;
+      }
+    }, []);
+
     const handleScroll = (scrollDirection: 'left' | 'right') => {
       if (scrollRef.current) {
-        const scrollAmount = 600;
+        const scrollAmount = 800; // Increased for more visible scroll
         const newPosition = scrollDirection === 'left' 
           ? scrollRef.current.scrollLeft - scrollAmount
           : scrollRef.current.scrollLeft + scrollAmount;
@@ -135,7 +166,7 @@ const Portfolio = () => {
           onMouseLeave={() => setIsPaused(false)}
         >
           <div 
-            className={`flex gap-4 ${!isPaused ? (direction === 'left' ? 'animate-scroll-left' : 'animate-scroll-right') : ''}`}
+            className="flex gap-4"
             style={{ width: 'fit-content' }}
           >
             {/* Duplicate items 3 times for seamless infinite loop */}
