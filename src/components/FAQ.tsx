@@ -2,11 +2,6 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 const FAQ = () => {
   const faqs = [
     {
-      question: "Quais as diferenças entre os fantoches personalizados e os Zucco IA Collection?",
-      answer:
-        "**Os personalizados:**\n1. São produzidos conforme a imagem enviada pelo cliente, podem ser humanos, animais e outros objetos. Criamos baseados nas imagens enviadas pelo cliente.\n2. Tamanho maior, podemos ser corpo inteiro ou meio corpo.\n3. Roupas personalizadas.\n4. Mãos articuladas.\n5. Valor definido após avaliação do grau de dificuldade, tempo de produção e materiais utilizados enviado via orçamento.\n\n**Zucco IA Collection** em nossa página:\n1. São produzidos conforme a imagem criada em nossa página pela IA.\n2. Tamanho menor somente meio corpo.\n3. Entregue somente com uma camiseta.\n4. Mãos fixas.\n5. Preço disponível na página.\n6. Não é possível fazer modificações na imagem produzida pela IA.",
-    },
-    {
       question: "Qual o estilo da Zucco Puppets?",
       answer:
         "Temos nosso estilo próprio, inspirado no universo dos Muppets e da Vila Sésamo — personagens expressivos, cheios de vida e personalidade única.",
@@ -33,7 +28,7 @@ const FAQ = () => {
     {
       question: "Quais os tamanhos dos fantoches que posso adquirir?",
       answer:
-        "**Fantoches personalizados:** Trabalhamos com dois tamanhos: Meio corpo (aproximadamente 60 cm) e Corpo inteiro (aproximadamente 1 metro).\n\n**Zucco IA Collection:** Somente meio corpo com aproximadamente 40 centímetros",
+        "Trabalhamos com dois tamanhos: Meio corpo (aproximadamente 60 cm) e Corpo inteiro (aproximadamente 1 metro).",
     },
     {
       question: "Quais materiais são usados?",
@@ -73,7 +68,7 @@ const FAQ = () => {
     {
       question: "O que acontece se eu quiser alterar algo durante a produção?",
       answer:
-        "**Fantoches Personalizados:** Pequenas alterações são possíveis até a fase de montagem final. Alterações significativas podem gerar custos adicionais e ampliar o prazo de entrega.\n**Fantoches Zucco IA Collection:** pequenas alterações podem ser avaliadas antes do início da produção, por exemplo: cor dos olhos...",
+        "Pequenas alterações são possíveis até a fase de montagem final. Alterações significativas podem gerar custos adicionais e ampliar o prazo de entrega.",
     },
     {
       question: "Vocês fazem mais de um fantoche igual (para equipes, escolas, etc.)?",
@@ -89,9 +84,9 @@ const FAQ = () => {
       answer: "Sim, nossos fantoches são com hastes para manipulação removíveis.",
     },
     {
-      question: "Os fantoches da Zucco Puppets são entregues vestidos?",
+      question: "Os fantoches são entregues vestidos?",
       answer:
-        "**Fantoches personalizados**: caso o cliente solicite, serão orçados e entregues com as roupas solicitadas.\n\n**Zucco IA Collection**: Não serão fornecidas roupas personalizadas, serão entregues somente com uma camiseta de manga curta da Zucco Puppets.",
+        "Caso o cliente solicite, os fantoches serão orçados e entregues com as roupas solicitadas.",
     },
     {
       question: "Posso comprar roupas ou acessórios separados para o fantoche?",
@@ -122,7 +117,7 @@ const FAQ = () => {
     {
       question: "Como é feito o pagamento?",
       answer:
-        "**Fantoches Personalizados:** Aceitamos PIX e depósito bancário. **Zucco IA Collection:** Aceitamos PIX, cartão de crédito ou débito.",
+        "Aceitamos PIX e depósito bancário.",
     },
     {
       question: "O que torna os fantoches personalizados diferentes dos modelos comuns?",
