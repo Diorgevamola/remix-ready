@@ -1,9 +1,7 @@
 import { Heart, Sparkles, Star, Users } from "lucide-react";
 import rodrigoPuppets from "@/assets/imagens_webp/rodrigo-puppets.webp";
-
 const About = () => {
-  return (
-    <section id="about" className="py-12 md:py-16 lg:py-20 relative overflow-hidden scroll-mt-20">
+  return <section id="about" className="py-12 md:py-16 lg:py-20 relative overflow-hidden scroll-mt-20">
       {/* Gradient Transition from Hero */}
       <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-background/0 via-background/50 to-background pointer-events-none -mt-16" />
       
@@ -35,12 +33,7 @@ const About = () => {
             {/* Image */}
             <div className="relative order-1">
               <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-accent/20 rounded-2xl blur-xl" />
-              <img
-                src={rodrigoPuppets}
-                alt="Rodrigo Araújo com fantoches personalizados"
-                loading="lazy"
-                className="relative rounded-2xl shadow-xl w-full"
-              />
+              <img src={rodrigoPuppets} alt="Rodrigo Araújo com fantoches personalizados" loading="lazy" className="relative rounded-2xl shadow-xl w-full" />
             </div>
 
             {/* Text Content */}
@@ -59,8 +52,7 @@ const About = () => {
               </p>
 
               <p className="text-foreground/90">
-                Atendemos encomendas dos mais diversos países e temos orgulho em dividir nosso
-                sucesso ensinando aos nossos alunos como produzir o seu próprio fantoche.
+                Atendemos encomendas dos mais diversos países.
               </p>
 
               {/* Features Grid */}
@@ -99,8 +91,6 @@ const About = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default About;
