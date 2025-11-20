@@ -72,11 +72,6 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Scroll Indicator - Desktop (Between columns) */}
-          <div className="absolute left-1/2 bottom-12 -translate-x-1/2 animate-bounce hidden lg:block z-20">
-            <ChevronsDown className="w-8 h-8 text-primary/70" />
-          </div>
-
           {/* Right Column - Image */}
           <div className="relative animate-fade-in delay-300 hidden lg:block">
             <div className="relative">
@@ -84,6 +79,11 @@ const Hero = () => {
               <img src={rodrigoPuppets} alt="Rodrigo com fantoches personalizados" loading="eager" fetchPriority="high" decoding="async" width="600" height="800" className="relative rounded-3xl shadow-[var(--shadow-glow)] w-full h-auto object-cover" />
             </div>
           </div>
+        </div>
+
+        {/* Scroll Indicator - Desktop (Centered at bottom) */}
+        <div className="absolute left-1/2 -translate-x-1/2 bottom-4 lg:bottom-8 animate-bounce hidden lg:block z-20">
+          <ChevronsDown className="w-8 h-8 text-primary/70" />
         </div>
       </div>
     </section>;
