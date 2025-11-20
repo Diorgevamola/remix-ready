@@ -126,6 +126,16 @@ All colors MUST be HSL.
   .scrollbar-hide {
     -ms-overflow-style: none;
     scrollbar-width: none;
+    overscroll-behavior-x: none;
+  }
+  
+  /* Prevent horizontal scroll on wheel, allow only drag */
+  .no-wheel-scroll {
+    overscroll-behavior-x: none;
+  }
+  
+  .no-wheel-scroll::-webkit-scrollbar {
+    display: none;
   }
 }
 
