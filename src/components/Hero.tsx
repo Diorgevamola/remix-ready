@@ -76,7 +76,7 @@ const Hero = () => {
           <div className="relative animate-fade-in delay-300 hidden lg:block">
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-r from-primary/30 to-secondary/30 rounded-3xl blur-2xl" />
-              <img src={rodrigoPuppets} alt="Rodrigo com fantoches personalizados" loading="eager" fetchPriority="high" decoding="async" width="600" height="800" className="relative rounded-3xl shadow-[var(--shadow-glow)] w-full h-auto object-cover" />
+              <img src={rodrigoPuppets} alt="Rodrigo com fantoches personalizados" loading="eager" fetchPriority="high" decoding="async" width="600" height="800" className="relative rounded-3xl shadow-[var(--shadow-glow)] w-11/12 mx-auto h-auto object-cover" />
             </div>
           </div>
         </div>
