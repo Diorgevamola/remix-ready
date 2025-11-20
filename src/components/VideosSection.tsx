@@ -1,10 +1,10 @@
 const VideosSection = () => {
   const videos = [
     {
-      id: "CK8flLTy784",
-      url: "https://www.youtube.com/embed/CK8flLTy784",
-      title: "Fantoche em Ação",
-      aspectRatio: "16/9"
+      id: "yGZYnDdjVo8",
+      url: "https://www.youtube.com/embed/yGZYnDdjVo8",
+      title: "Short - Fantoches",
+      aspectRatio: "9/16"
     },
     {
       id: "iMY0xzS7oMg",
