@@ -13,8 +13,8 @@ const Index = () => {
       <Navbar />
       <Hero />
       <About />
-      <Portfolio />
       <VideosSection />
+      <Portfolio />
       
       {/* CTA Section */}
       <section className="py-16 md:py-20 relative overflow-hidden bg-gradient-to-br from-black via-primary/5 to-black">
