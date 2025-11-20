@@ -94,6 +94,9 @@ const Portfolio = () => {
     const scrollRef = useRef<HTMLDivElement>(null);
     const [isPaused, setIsPaused] = useState(false);
     const pauseTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+    const [isDragging, setIsDragging] = useState(false);
+    const [startX, setStartX] = useState(0);
+    const [scrollLeft, setScrollLeft] = useState(0);
 
     // Auto-scroll with JavaScript
     useEffect(() => {
@@ -126,40 +129,46 @@ const Portfolio = () => {
       }
     }, []);
 
-    // Detect drag interaction
-    useEffect(() => {
-      const scrollContainer = scrollRef.current;
-      if (!scrollContainer) return;
+    // Mouse drag handlers
+    const handleMouseDown = (e: React.MouseEvent) => {
+      setIsDragging(true);
+      setIsPaused(true);
+      setStartX(e.pageX - scrollRef.current!.offsetLeft);
+      setScrollLeft(scrollRef.current!.scrollLeft);
+    };
 
-      let dragTimeout: NodeJS.Timeout;
+    const handleMouseMove = (e: React.MouseEvent) => {
+      if (!isDragging || !scrollRef.current) return;
+      e.preventDefault();
+      const x = e.pageX - scrollRef.current.offsetLeft;
+      const walk = (x - startX) * 2;
+      scrollRef.current.scrollLeft = scrollLeft - walk;
+    };
 
-      const handleDragStart = () => {
-        setIsPaused(true);
-        clearTimeout(dragTimeout);
-      };
+    const handleMouseUp = () => {
+      setIsDragging(false);
+      setTimeout(() => setIsPaused(false), 2000);
+    };
 
-      const handleDragEnd = () => {
-        clearTimeout(dragTimeout);
-        dragTimeout = setTimeout(() => {
-          setIsPaused(false);
-        }, 2000);
-      };
+    // Touch drag handlers
+    const handleTouchStart = (e: React.TouchEvent) => {
+      setIsDragging(true);
+      setIsPaused(true);
+      setStartX(e.touches[0].pageX - scrollRef.current!.offsetLeft);
+      setScrollLeft(scrollRef.current!.scrollLeft);
+    };
 
-      scrollContainer.addEventListener('mousedown', handleDragStart);
-      scrollContainer.addEventListener('mouseup', handleDragEnd);
-      scrollContainer.addEventListener('mouseleave', handleDragEnd);
-      scrollContainer.addEventListener('touchstart', handleDragStart);
-      scrollContainer.addEventListener('touchend', handleDragEnd);
+    const handleTouchMove = (e: React.TouchEvent) => {
+      if (!isDragging || !scrollRef.current) return;
+      const x = e.touches[0].pageX - scrollRef.current.offsetLeft;
+      const walk = (x - startX) * 2;
+      scrollRef.current.scrollLeft = scrollLeft - walk;
+    };
 
-      return () => {
-        clearTimeout(dragTimeout);
-        scrollContainer.removeEventListener('mousedown', handleDragStart);
-        scrollContainer.removeEventListener('mouseup', handleDragEnd);
-        scrollContainer.removeEventListener('mouseleave', handleDragEnd);
-        scrollContainer.removeEventListener('touchstart', handleDragStart);
-        scrollContainer.removeEventListener('touchend', handleDragEnd);
-      };
-    }, []);
+    const handleTouchEnd = () => {
+      setIsDragging(false);
+      setTimeout(() => setIsPaused(false), 2000);
+    };
 
     const handleScroll = (scrollDirection: 'left' | 'right') => {
       if (scrollRef.current) {
@@ -209,9 +218,14 @@ const Portfolio = () => {
 
         <div 
           ref={scrollRef}
-          className="overflow-x-hidden scrollbar-hide"
-          onMouseEnter={() => setIsPaused(true)}
-          onMouseLeave={() => setIsPaused(false)}
+          className="overflow-x-auto scrollbar-hide cursor-grab active:cursor-grabbing"
+          onMouseDown={handleMouseDown}
+          onMouseMove={handleMouseMove}
+          onMouseUp={handleMouseUp}
+          onMouseLeave={handleMouseUp}
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
         >
           <div 
             className="flex gap-4"
@@ -228,6 +242,8 @@ const Portfolio = () => {
                     src={item.image}
                     alt={item.title}
                     loading="lazy"
+                    draggable={false}
+                    onDragStart={(e) => e.preventDefault()}
                     className="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-500"
                   />
                 </div>
