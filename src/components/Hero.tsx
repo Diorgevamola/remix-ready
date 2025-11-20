@@ -30,9 +30,7 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center relative">
           {/* Left Column - Text */}
           <div className="text-center lg:text-left space-y-3 sm:space-y-6 lg:space-y-8 animate-fade-in">
-            <div className="flex items-center justify-center lg:justify-start gap-2 mb-2">
-              <Sparkles className="w-5 h-5 sm:w-6 sm:h-6 text-accent animate-sparkle" />
-            </div>
+            
             <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold leading-tight md:text-5xl [text-shadow:_0_2px_8px_rgb(0_0_0_/_60%)] lg:[text-shadow:none]">
               Damos Vida A Personagens
               <span className="block bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent pb-1 text-glow [text-shadow:_0_0_30px_hsl(var(--primary)_/_0.5)]">
