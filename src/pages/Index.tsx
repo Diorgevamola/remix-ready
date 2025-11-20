@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Portfolio from "@/components/Portfolio";
+import VideosSection from "@/components/VideosSection";
 import FAQ from "@/components/FAQ";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
@@ -13,6 +14,7 @@ const Index = () => {
       <Hero />
       <About />
       <Portfolio />
+      <VideosSection />
       
       {/* CTA Section */}
       <section className="py-16 md:py-20 relative overflow-hidden bg-gradient-to-br from-black via-primary/5 to-black">
