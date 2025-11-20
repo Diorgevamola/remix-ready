@@ -126,7 +126,7 @@ const Portfolio = () => {
       }
     }, []);
 
-    // Detect drag interaction
+    // Detect drag interaction and block all scroll
     useEffect(() => {
       const scrollContainer = scrollRef.current;
       if (!scrollContainer) return;
@@ -145,11 +145,17 @@ const Portfolio = () => {
         }, 2000);
       };
 
+      // Block all scroll over the container
+      const handleWheel = (e: WheelEvent) => {
+        e.preventDefault();
+      };
+
       scrollContainer.addEventListener('mousedown', handleDragStart);
       scrollContainer.addEventListener('mouseup', handleDragEnd);
       scrollContainer.addEventListener('mouseleave', handleDragEnd);
       scrollContainer.addEventListener('touchstart', handleDragStart);
       scrollContainer.addEventListener('touchend', handleDragEnd);
+      scrollContainer.addEventListener('wheel', handleWheel, { passive: false });
 
       return () => {
         clearTimeout(dragTimeout);
@@ -158,6 +164,7 @@ const Portfolio = () => {
         scrollContainer.removeEventListener('mouseleave', handleDragEnd);
         scrollContainer.removeEventListener('touchstart', handleDragStart);
         scrollContainer.removeEventListener('touchend', handleDragEnd);
+        scrollContainer.removeEventListener('wheel', handleWheel);
       };
     }, []);
 
