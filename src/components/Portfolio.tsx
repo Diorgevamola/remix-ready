@@ -145,11 +145,21 @@ const Portfolio = () => {
         }, 2000);
       };
 
+      // Prevent vertical scroll when using mouse wheel over portfolio rows
+      const handleWheel = (e: WheelEvent) => {
+        e.preventDefault();
+        // Apply horizontal scroll based on vertical wheel movement
+        scrollContainer.scrollLeft += e.deltaY;
+        handleDragStart();
+        handleDragEnd();
+      };
+
       scrollContainer.addEventListener('mousedown', handleDragStart);
       scrollContainer.addEventListener('mouseup', handleDragEnd);
       scrollContainer.addEventListener('mouseleave', handleDragEnd);
       scrollContainer.addEventListener('touchstart', handleDragStart);
       scrollContainer.addEventListener('touchend', handleDragEnd);
+      scrollContainer.addEventListener('wheel', handleWheel, { passive: false });
 
       return () => {
         clearTimeout(dragTimeout);
@@ -158,6 +168,7 @@ const Portfolio = () => {
         scrollContainer.removeEventListener('mouseleave', handleDragEnd);
         scrollContainer.removeEventListener('touchstart', handleDragStart);
         scrollContainer.removeEventListener('touchend', handleDragEnd);
+        scrollContainer.removeEventListener('wheel', handleWheel);
       };
     }, []);
 
