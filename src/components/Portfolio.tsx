@@ -126,23 +126,35 @@ const Portfolio = () => {
       }
     }, []);
 
-    // Detect drag interaction
+    // Detect drag interaction and prevent wheel scroll
     useEffect(() => {
       const scrollContainer = scrollRef.current;
       if (!scrollContainer) return;
 
       let dragTimeout: NodeJS.Timeout;
+      let isDragging = false;
 
       const handleDragStart = () => {
+        isDragging = true;
         setIsPaused(true);
         clearTimeout(dragTimeout);
       };
 
       const handleDragEnd = () => {
+        isDragging = false;
         clearTimeout(dragTimeout);
         dragTimeout = setTimeout(() => {
           setIsPaused(false);
         }, 2000);
+      };
+
+      // Prevent wheel from scrolling horizontally in the container
+      const handleWheel = (e: WheelEvent) => {
+        // Prevent horizontal scroll from wheel
+        // This allows the page to scroll vertically normally
+        if (!isDragging) {
+          e.stopPropagation();
+        }
       };
 
       scrollContainer.addEventListener('mousedown', handleDragStart);
@@ -150,6 +162,7 @@ const Portfolio = () => {
       scrollContainer.addEventListener('mouseleave', handleDragEnd);
       scrollContainer.addEventListener('touchstart', handleDragStart);
       scrollContainer.addEventListener('touchend', handleDragEnd);
+      scrollContainer.addEventListener('wheel', handleWheel, { passive: true });
 
       return () => {
         clearTimeout(dragTimeout);
@@ -158,6 +171,7 @@ const Portfolio = () => {
         scrollContainer.removeEventListener('mouseleave', handleDragEnd);
         scrollContainer.removeEventListener('touchstart', handleDragStart);
         scrollContainer.removeEventListener('touchend', handleDragEnd);
+        scrollContainer.removeEventListener('wheel', handleWheel);
       };
     }, []);
 
@@ -209,7 +223,7 @@ const Portfolio = () => {
 
         <div 
           ref={scrollRef}
-          className="overflow-x-auto scrollbar-hide"
+          className="overflow-x-hidden scrollbar-hide"
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
         >
