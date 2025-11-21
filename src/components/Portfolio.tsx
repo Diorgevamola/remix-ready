@@ -76,7 +76,7 @@ const Portfolio = () => {
     { title: "Astronauta Verde", description: "Do espaço", image: astronautaVerde },
     { title: "Cientista", description: "Com óculos", image: cientistaOculos },
     { title: "Sarele", description: "Personagem único", image: sarele },
-    { title: "Boneco de Gorro", description: "Com gorro vermelho", image: bonecoGorroVermelho },
+    { title: "A criança invisível", description: "Com gorro vermelho", image: bonecoGorroVermelho },
     { title: "Dente", description: "Mascote dental", image: dente },
     { title: "Rose Puppet", description: "A mulher dos zoi azul", image: rosePuppet },
   ];
