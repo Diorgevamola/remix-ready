@@ -92,92 +92,9 @@ const Portfolio = () => {
 
   const PortfolioRow = ({ items, direction = 'left' }: PortfolioRowProps) => {
     const scrollRef = useRef<HTMLDivElement>(null);
-    const [isPaused, setIsPaused] = useState(false);
-    const pauseTimeoutRef = useRef<NodeJS.Timeout | null>(null);
-    const [isDragging, setIsDragging] = useState(false);
-    const [startX, setStartX] = useState(0);
-    const [scrollLeft, setScrollLeft] = useState(0);
-
-    // Auto-scroll with JavaScript
-    useEffect(() => {
-      if (isPaused || !scrollRef.current) return;
-
-      const scrollSpeed = 0.5;
-      const scrollInterval = setInterval(() => {
-        if (scrollRef.current) {
-          const scrollAmount = direction === 'left' ? scrollSpeed : -scrollSpeed;
-          scrollRef.current.scrollLeft += scrollAmount;
-
-          // Seamless infinite loop reset
-          const maxScroll = scrollRef.current.scrollWidth / 3;
-          if (scrollRef.current.scrollLeft >= maxScroll * 2) {
-            scrollRef.current.scrollLeft = maxScroll;
-          } else if (scrollRef.current.scrollLeft <= 0) {
-            scrollRef.current.scrollLeft = maxScroll;
-          }
-        }
-      }, 16);
-
-      return () => clearInterval(scrollInterval);
-    }, [isPaused, direction]);
-
-    // Initialize scroll position in the middle
-    useEffect(() => {
-      if (scrollRef.current) {
-        const maxScroll = scrollRef.current.scrollWidth / 3;
-        scrollRef.current.scrollLeft = maxScroll;
-      }
-    }, []);
-
-    // Mouse drag handlers
-    const handleMouseDown = (e: React.MouseEvent) => {
-      setIsDragging(true);
-      setIsPaused(true);
-      setStartX(e.pageX - scrollRef.current!.offsetLeft);
-      setScrollLeft(scrollRef.current!.scrollLeft);
-    };
-
-    const handleMouseMove = (e: React.MouseEvent) => {
-      if (!isDragging || !scrollRef.current) return;
-      e.preventDefault();
-      const x = e.pageX - scrollRef.current.offsetLeft;
-      const walk = (x - startX) * 2;
-      scrollRef.current.scrollLeft = scrollLeft - walk;
-    };
-
-    const handleMouseUp = () => {
-      setIsDragging(false);
-      setTimeout(() => setIsPaused(false), 2000);
-    };
-
-    // Touch drag handlers
-    const handleTouchStart = (e: React.TouchEvent) => {
-      setIsDragging(true);
-      setIsPaused(true);
-      setStartX(e.touches[0].pageX - scrollRef.current!.offsetLeft);
-      setScrollLeft(scrollRef.current!.scrollLeft);
-    };
-
-    const handleTouchMove = (e: React.TouchEvent) => {
-      if (!isDragging || !scrollRef.current) return;
-      const x = e.touches[0].pageX - scrollRef.current.offsetLeft;
-      const walk = (x - startX) * 2;
-      scrollRef.current.scrollLeft = scrollLeft - walk;
-    };
-
-    const handleTouchEnd = () => {
-      setIsDragging(false);
-      setTimeout(() => setIsPaused(false), 2000);
-    };
 
     const handleScroll = (scrollDirection: 'left' | 'right') => {
       if (scrollRef.current) {
-        setIsPaused(true);
-        
-        if (pauseTimeoutRef.current) {
-          clearTimeout(pauseTimeoutRef.current);
-        }
-
         const scrollAmount = 800;
         const newPosition = scrollDirection === 'left' 
           ? scrollRef.current.scrollLeft - scrollAmount
@@ -187,10 +104,6 @@ const Portfolio = () => {
           left: newPosition,
           behavior: 'smooth'
         });
-
-        pauseTimeoutRef.current = setTimeout(() => {
-          setIsPaused(false);
-        }, 2000);
       }
     };
 
@@ -218,25 +131,14 @@ const Portfolio = () => {
 
         <div 
           ref={scrollRef}
-          className="overflow-x-auto scrollbar-hide cursor-grab active:cursor-grabbing"
-          onMouseDown={handleMouseDown}
-          onMouseMove={handleMouseMove}
-          onMouseUp={handleMouseUp}
-          onMouseLeave={handleMouseUp}
-          onTouchStart={handleTouchStart}
-          onTouchMove={handleTouchMove}
-          onTouchEnd={handleTouchEnd}
-          onWheel={(e) => {
-            e.preventDefault();
-            e.stopPropagation();
-          }}
+          className="overflow-x-auto scrollbar-hide"
         >
           <div 
             className="flex gap-4"
             style={{ width: 'fit-content' }}
           >
-            {/* Duplicate items 3 times for seamless infinite loop */}
-            {[...items, ...items, ...items].map((item, index) => (
+            {/* Portfolio items */}
+            {items.map((item, index) => (
               <div
                 key={index}
                 className="group/item relative flex-shrink-0 w-[140px] md:w-[180px] bg-card rounded-xl overflow-hidden border border-primary/20 shadow-card hover:shadow-glow transition-all duration-300 hover:scale-105"
