@@ -42,7 +42,7 @@ const Portfolio = () => {
   const portfolioItems = [
     { title: "Carinhoso", description: "Fantoche monstro roxo", image: carinhoso },
     { title: "DJ MC", description: "Personagem urbano", image: djMc },
-    { title: "Adenia", description: "Fantoche amarelo", image: dna },
+    { title: "Adenia", description: "Papelaria Affthehype", image: dna },
     { title: "Duende", description: "Personagem verde", image: duende },
     { title: "Fada", description: "Fantoche mágico", image: fada },
     { title: "Bíblia", description: "Livro personalizado", image: biblia },
