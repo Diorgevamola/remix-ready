@@ -37,6 +37,7 @@ import astronautaVerde from "@/assets/imagens_webp/astronauta_verde.webp";
 import cientistaOculos from "@/assets/imagens_webp/cientista_oculos.webp";
 import sarele from "@/assets/imagens_webp/sarele.webp";
 import bonecoGorroVermelho from "@/assets/imagens_webp/boneco_gorro_vermelho.webp";
+import rosePuppet from "@/assets/imagens_webp/rose_puppet.webp";
 
 const Portfolio = () => {
   const portfolioItems = [
@@ -77,6 +78,7 @@ const Portfolio = () => {
     { title: "Sarele", description: "Personagem único", image: sarele },
     { title: "Boneco de Gorro", description: "Com gorro vermelho", image: bonecoGorroVermelho },
     { title: "Dente", description: "Mascote dental", image: dente },
+    { title: "Rose Puppet", description: "A mulher dos zoi azul", image: rosePuppet },
   ];
 
   // Split into 4 rows
