@@ -235,7 +235,11 @@ const Portfolio = () => {
             {/* Portfolio items */}
             {items.map((item, index) => <div key={index} className="group/item relative flex-shrink-0 w-[140px] md:w-[180px] bg-card rounded-xl overflow-hidden border border-primary/20 shadow-card hover:shadow-glow transition-all duration-300 hover:scale-105">
                 <div className="aspect-[2/3] overflow-hidden bg-gradient-to-br from-card to-black">
-                  
+                  <img 
+                    src={item.image} 
+                    alt={item.title}
+                    className="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-300"
+                  />
                 </div>
                 
                 <div className="p-2 space-y-1 bg-black/80 backdrop-blur-sm">
