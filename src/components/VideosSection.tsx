@@ -32,7 +32,7 @@ const VideosSection = () => {
             </span>
           </h2>
           <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
-            Confira alguns dos nossos trabalhos e veja a magia dos fantoches ganhando vida
+            Personagens que saíram daqui e viraram estrelas em campanhas, programas e comerciais
           </p>
         </div>
 
