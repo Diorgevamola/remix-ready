@@ -49,7 +49,7 @@ const Portfolio = () => {
     { title: "Bíblia", description: "Livro personalizado", image: biblia },
     { title: "Monstro Rosa", description: "Fantoche peludo rosa", image: monstroRosa },
     { title: "Monstrinha Rosa", description: "Coleção Monstrinhos", image: monstroRosa2 },
-    { title: "Monstro Azul", description: "Personagem azul", image: monstroAzul },
+    { title: "Monstrinho Azul", description: "Personagem azul", image: monstroAzul },
     { title: "Monstro Amarelo", description: "Fantoche amarelo", image: monstroAmarelo },
     { title: "Monstro Verde", description: "Personagem verde", image: monstroVerde },
     { title: "Monstro Verde Nariz Azul", description: "Com nariz azul", image: monstroVerdeNarizAzul },
