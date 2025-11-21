@@ -217,6 +217,13 @@ const Portfolio = () => {
         });
       }
     };
+    
+    const handleWheel = (e: React.WheelEvent) => {
+      e.preventDefault();
+      if (scrollRef.current) {
+        scrollRef.current.scrollLeft += e.deltaY;
+      }
+    };
     return <div className="relative overflow-hidden py-2 group">
         {/* Left Arrow */}
         <button onClick={() => handleScroll('left')} className="absolute left-4 top-1/2 -translate-y-1/2 z-50 bg-black/80 hover:bg-black/95 backdrop-blur-sm border border-primary/50 rounded-full p-3 opacity-0 group-hover:opacity-100 transition-all duration-300 cursor-pointer shadow-xl hover:scale-110" aria-label="Scroll left" type="button">
@@ -228,7 +235,7 @@ const Portfolio = () => {
           <ChevronRight className="w-6 h-6 text-primary" />
         </button>
 
-        <div ref={scrollRef} className="overflow-x-auto scrollbar-hide">
+        <div ref={scrollRef} className="overflow-x-auto scrollbar-hide" onWheel={handleWheel}>
           <div className="flex gap-4" style={{
           width: 'fit-content'
         }}>
