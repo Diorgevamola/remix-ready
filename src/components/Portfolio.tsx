@@ -41,7 +41,7 @@ import rosePuppet from "@/assets/imagens_webp/rose_puppet.webp";
 
 const Portfolio = () => {
   const portfolioItems = [
-    { title: "Carinhoso", description: "Fantoche monstro roxo", image: carinhoso },
+    { title: "Carinhoso", description: "Danone Nutrícia", image: carinhoso },
     { title: "DJ MC", description: "Personagem urbano", image: djMc },
     { title: "Adenia", description: "Papelaria Affthehype", image: dna },
     { title: "Duende", description: "Personagem verde", image: duende },
