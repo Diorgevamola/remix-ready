@@ -53,7 +53,7 @@ const Portfolio = () => {
     { title: "Monstrinho Amarelo", description: "Coleção Monstrinhos", image: monstroAmarelo },
     { title: "Monstro Verde", description: "Personagem verde", image: monstroVerde },
     { title: "Monstro Verde Nariz Azul", description: "Com nariz azul", image: monstroVerdeNarizAzul },
-    { title: "Monstro Amarelo 2", description: "Variação amarela", image: monstroAmarelo2 },
+    { title: "Monstrinho Amarelo 2", description: "Variação amarela", image: monstroAmarelo2 },
     { title: "Monstro Azul 2", description: "Variação azul", image: monstroAzul2 },
     { title: "Menina Sice", description: "Personagem infantil", image: meninaSice },
     { title: "Baby Yoda", description: "Personagem icônico", image: babyYoda },
