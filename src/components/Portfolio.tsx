@@ -173,7 +173,7 @@ const Portfolio = () => {
     image: astronautaVerde
   }, {
     title: "Zucco",
-    description: "Com óculos",
+    description: "Zucco Puppets",
     image: cientistaOculos
   }, {
     title: "Sarahele",
