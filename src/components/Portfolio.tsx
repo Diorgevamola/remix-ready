@@ -121,7 +121,7 @@ const Portfolio = () => {
     image: personagemOculos
   }, {
     title: "Théo",
-    description: "Mascote oficial",
+    description: "Experimentos Artísticos",
     image: bonecoZucco
   }, {
     title: "Ana",
