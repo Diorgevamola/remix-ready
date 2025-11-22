@@ -132,7 +132,7 @@ const Portfolio = () => {
     description: "Com lupa",
     image: cachorroDetetive
   }, {
-    title: "Menina Bebê",
+    title: "Tiemi",
     description: "Infantil delicado",
     image: meninaBebe
   }, {
