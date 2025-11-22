@@ -96,7 +96,7 @@ const Portfolio = () => {
     description: "Coleção Monstrinhos",
     image: monstroAzul2
   }, {
-    title: "Menina Sice",
+    title: "Cice",
     description: "Personagem infantil",
     image: meninaSice
   }, {
