@@ -172,7 +172,7 @@ const Portfolio = () => {
     description: "Do espaço",
     image: astronautaVerde
   }, {
-    title: "Cientista",
+    title: "Zucco",
     description: "Com óculos",
     image: cientistaOculos
   }, {
