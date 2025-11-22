@@ -177,7 +177,7 @@ const Portfolio = () => {
     image: cientistaOculos
   }, {
     title: "Sarahele",
-    description: "Personagem único",
+    description: "Monkinoa",
     image: sarele
   }, {
     title: "A criança invisível",
