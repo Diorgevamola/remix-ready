@@ -97,7 +97,7 @@ const Portfolio = () => {
     image: monstroAzul2
   }, {
     title: "Cice",
-    description: "Personagem infantil",
+    description: "TV Guarapuava",
     image: meninaSice
   }, {
     title: "Baby Yoda",
