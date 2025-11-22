@@ -141,7 +141,7 @@ const Portfolio = () => {
     image: leao
   }, {
     title: "Nutrão",
-    description: "Mascote educativo",
+    description: "Danone Nutrícia",
     image: nutrao
   }, {
     title: "Homem de Bigode",
