@@ -128,7 +128,7 @@ const Portfolio = () => {
     description: "Experimentos Artísticos",
     image: monstroVermelhoPeludo
   }, {
-    title: "Cachorro Detetive",
+    title: "Sherlok Dog",
     description: "Com lupa",
     image: cachorroDetetive
   }, {
