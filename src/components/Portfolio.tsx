@@ -101,7 +101,7 @@ const Portfolio = () => {
     image: meninaSice
   }, {
     title: "Baby Yoda",
-    description: "Personagem icônico",
+    description: "Israel",
     image: babyYoda
   }, {
     title: "Alienígena",
