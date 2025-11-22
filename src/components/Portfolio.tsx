@@ -176,7 +176,7 @@ const Portfolio = () => {
     description: "Com óculos",
     image: cientistaOculos
   }, {
-    title: "Sarele",
+    title: "Sarahele",
     description: "Personagem único",
     image: sarele
   }, {
