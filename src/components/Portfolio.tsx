@@ -81,7 +81,7 @@ const Portfolio = () => {
     image: monstroAmarelo
   }, {
     title: "Monstrinho Verde Nariz Rosa",
-    description: "Personagem verde",
+    description: "Coleção Monstrinhos",
     image: monstroVerde
   }, {
     title: "Monstrinho Verde Nariz Azul",
