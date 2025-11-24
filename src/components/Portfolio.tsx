@@ -83,7 +83,7 @@ const Portfolio = () => {
     image: dna
   }, {
     title: "Duende",
-    description: "Personagem verde",
+    description: "",
     image: duende
   }, {
     title: "Fada",
