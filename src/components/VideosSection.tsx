@@ -1,14 +1,14 @@
 const VideosSection = () => {
   const videos = [
     {
-      id: "yGZYnDdjVo8",
-      url: "https://www.youtube.com/embed/yGZYnDdjVo8",
+      id: "iMY0xzS7oMg",
+      url: "https://www.youtube.com/embed/iMY0xzS7oMg",
       title: "Short - Fantoches",
       aspectRatio: "9/16",
     },
     {
-      id: "iMY0xzS7oMg",
-      url: "https://www.youtube.com/embed/iMY0xzS7oMg",
+      id: "yGZYnDdjVo8",
+      url: "https://www.youtube.com/embed/yGZYnDdjVo8",
       title: "Short - Fantoches",
       aspectRatio: "9/16",
     },
@@ -36,7 +36,7 @@ const VideosSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-4xl mx-auto">
           {videos.map((video) => (
             <div
               key={video.id}
