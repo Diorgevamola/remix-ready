@@ -38,6 +38,36 @@ import cientistaOculos from "@/assets/imagens_webp/cientista_oculos.webp";
 import sarele from "@/assets/imagens_webp/sarele.webp";
 import bonecoGorroVermelho from "@/assets/imagens_webp/boneco_gorro_vermelho.webp";
 import rosePuppet from "@/assets/imagens_webp/rose_puppet.webp";
+import alienVerdeAntenas from "@/assets/imagens_webp/alien_verde_antenas.webp";
+import cachorroPanikeka from "@/assets/imagens_webp/cachorro_panikeka.webp";
+import chefUairango from "@/assets/imagens_webp/chef_uairango.webp";
+import cientistaCabeloBranco from "@/assets/imagens_webp/cientista_cabelo_branco.webp";
+import cobraRosaAmarela from "@/assets/imagens_webp/cobra_rosa_amarela.webp";
+import cozinheiroBob from "@/assets/imagens_webp/cozinheiro_bob.webp";
+import doutorBarbaCinza from "@/assets/imagens_webp/doutor_barba_cinza.webp";
+import gatoLaranjaAnimado from "@/assets/imagens_webp/gato_laranja_animado.webp";
+import golfinhoCinza from "@/assets/imagens_webp/golfinho_cinza.webp";
+import guitarristaBoaVermelho from "@/assets/imagens_webp/guitarrista_boa_vermelho.webp";
+import mascoteLivroCapacete from "@/assets/imagens_webp/mascote_livro_capacete.webp";
+import meninaCabeloCastanho from "@/assets/imagens_webp/menina_cabelo_castanho.webp";
+import meninaCamisetaVerde from "@/assets/imagens_webp/menina_camiseta_verde.webp";
+import meninaTiaraLaranja from "@/assets/imagens_webp/menina_tiara_laranja.webp";
+import meninoBoneAzul from "@/assets/imagens_webp/menino_bone_azul.webp";
+import meninoCabeloLaranja from "@/assets/imagens_webp/menino_cabelo_laranja.webp";
+import meninoOculosMacacao from "@/assets/imagens_webp/menino_oculos_macacao.webp";
+import monstroCianoPeludo from "@/assets/imagens_webp/monstro_ciano_peludo.webp";
+import monstroPeludoAmarelo from "@/assets/imagens_webp/monstro_peludo_amarelo.webp";
+import monstroRosaCabeloPreto from "@/assets/imagens_webp/monstro_rosa_cabelo_preto.webp";
+import monstroVerdeOculos from "@/assets/imagens_webp/monstro_verde_oculos.webp";
+import pandaChapeuColorido from "@/assets/imagens_webp/panda_chapeu_colorido.webp";
+import personagemAmareloSorridente from "@/assets/imagens_webp/personagem_amarelo_sorridente.webp";
+import personagemAzulOculosLaranja from "@/assets/imagens_webp/personagem_azul_oculos_laranja.webp";
+import personagemMarromLaranja from "@/assets/imagens_webp/personagem_marrom_laranja.webp";
+import personagemRoupaRoxa from "@/assets/imagens_webp/personagem_roupa_roxa.webp";
+import personagemRoxoOnca from "@/assets/imagens_webp/personagem_roxo_onca.webp";
+import personagemTernoRoxo from "@/assets/imagens_webp/personagem_terno_roxo.webp";
+import senhorBigodeOculos from "@/assets/imagens_webp/senhor_bigode_oculos.webp";
+import senhorOculosColetelaranja from "@/assets/imagens_webp/senhor_oculos_colete_laranja.webp";
 const Portfolio = () => {
   const portfolioItems = [{
     title: "Carinhoso",
@@ -191,13 +221,136 @@ const Portfolio = () => {
     title: "Rose Puppet",
     description: "A mulher dos zoi azul",
     image: rosePuppet
+  }, {
+    title: "Alien Verde",
+    description: "Com antenas",
+    image: alienVerdeAntenas
+  }, {
+    title: "Cachorro Panikeka",
+    description: "Cachorrinho animado",
+    image: cachorroPanikeka
+  }, {
+    title: "Chef Uairango",
+    description: "Cozinheiro profissional",
+    image: chefUairango
+  }, {
+    title: "Cientista",
+    description: "Cabelo branco",
+    image: cientistaCabeloBranco
+  }, {
+    title: "Cobra",
+    description: "Rosa e amarela",
+    image: cobraRosaAmarela
+  }, {
+    title: "Bob",
+    description: "Cozinheiro",
+    image: cozinheiroBob
+  }, {
+    title: "Doutor",
+    description: "Barba cinza",
+    image: doutorBarbaCinza
+  }, {
+    title: "Gato Laranja",
+    description: "Animado",
+    image: gatoLaranjaAnimado
+  }, {
+    title: "Golfinho",
+    description: "Cinza",
+    image: golfinhoCinza
+  }, {
+    title: "Guitarrista",
+    description: "Boa vermelho",
+    image: guitarristaBoaVermelho
+  }, {
+    title: "Livro com Capacete",
+    description: "Mascote educativo",
+    image: mascoteLivroCapacete
+  }, {
+    title: "Menina",
+    description: "Cabelo castanho",
+    image: meninaCabeloCastanho
+  }, {
+    title: "Menina",
+    description: "Camiseta verde",
+    image: meninaCamisetaVerde
+  }, {
+    title: "Menina",
+    description: "Tiara laranja",
+    image: meninaTiaraLaranja
+  }, {
+    title: "Menino",
+    description: "Boné azul",
+    image: meninoBoneAzul
+  }, {
+    title: "Menino",
+    description: "Cabelo laranja",
+    image: meninoCabeloLaranja
+  }, {
+    title: "Menino",
+    description: "Óculos e macacão",
+    image: meninoOculosMacacao
+  }, {
+    title: "Monstro Ciano",
+    description: "Peludo",
+    image: monstroCianoPeludo
+  }, {
+    title: "Monstro Peludo",
+    description: "Amarelo",
+    image: monstroPeludoAmarelo
+  }, {
+    title: "Monstrinha Rosa",
+    description: "Cabelo preto",
+    image: monstroRosaCabeloPreto
+  }, {
+    title: "Monstro Verde",
+    description: "De óculos",
+    image: monstroVerdeOculos
+  }, {
+    title: "Panda",
+    description: "Chapéu colorido",
+    image: pandaChapeuColorido
+  }, {
+    title: "Personagem Amarelo",
+    description: "Sorridente",
+    image: personagemAmareloSorridente
+  }, {
+    title: "Personagem Azul",
+    description: "Óculos laranja",
+    image: personagemAzulOculosLaranja
+  }, {
+    title: "Personagem",
+    description: "Marrom e laranja",
+    image: personagemMarromLaranja
+  }, {
+    title: "Personagem",
+    description: "Roupa roxa",
+    image: personagemRoupaRoxa
+  }, {
+    title: "Personagem Roxo",
+    description: "Onça",
+    image: personagemRoxoOnca
+  }, {
+    title: "Personagem",
+    description: "Terno roxo",
+    image: personagemTernoRoxo
+  }, {
+    title: "Senhor",
+    description: "Bigode e óculos",
+    image: senhorBigodeOculos
+  }, {
+    title: "Senhor",
+    description: "Óculos e colete laranja",
+    image: senhorOculosColetelaranja
   }];
 
-  // Split into 4 rows
+  // Split into 7 rows
   const row1 = portfolioItems.slice(0, 10);
   const row2 = portfolioItems.slice(10, 20);
   const row3 = portfolioItems.slice(20, 30);
-  const row4 = portfolioItems.slice(30);
+  const row4 = portfolioItems.slice(30, 40);
+  const row5 = portfolioItems.slice(40, 50);
+  const row6 = portfolioItems.slice(50, 60);
+  const row7 = portfolioItems.slice(60);
   interface PortfolioRowProps {
     items: typeof portfolioItems;
     direction?: 'left' | 'right';
@@ -285,6 +438,9 @@ const Portfolio = () => {
           <PortfolioRow items={row2} direction="right" />
           <PortfolioRow items={row3} direction="left" />
           <PortfolioRow items={row4} direction="right" />
+          <PortfolioRow items={row5} direction="left" />
+          <PortfolioRow items={row6} direction="right" />
+          <PortfolioRow items={row7} direction="left" />
         </div>
       </div>
     </section>;
