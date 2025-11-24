@@ -391,7 +391,7 @@ const Portfolio = () => {
                   <img 
                     src={item.image} 
                     alt={item.title}
-                    className="w-full h-full object-cover group-hover/item:scale-110 transition-transform duration-300"
+                    className="w-full h-full object-cover"
                   />
                 </div>
                 
