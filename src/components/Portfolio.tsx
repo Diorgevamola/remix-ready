@@ -95,7 +95,7 @@ const Portfolio = () => {
     image: biblia
   }, {
     title: "Monstrinho Rosa 1",
-    description: "Fantoche peludo rosa",
+    description: "Coleção Monstrinhos",
     image: monstroRosa
   }, {
     title: "Monstrinha Rosa",
