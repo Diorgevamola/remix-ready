@@ -57,7 +57,7 @@ const Portfolio = () => {
     image: duende
   }, {
     title: "Fada",
-    description: "Fantoche mágico",
+    description: "",
     image: fada
   }, {
     title: "Bíblia",
