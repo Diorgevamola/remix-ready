@@ -91,7 +91,7 @@ const Portfolio = () => {
     image: fada
   }, {
     title: "Bíblia",
-    description: "Livro personalizado",
+    description: "",
     image: biblia
   }, {
     title: "Monstro Rosa",
