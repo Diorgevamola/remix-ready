@@ -40,11 +40,12 @@ const Hero = () => {
               <div className="relative rounded-2xl overflow-hidden shadow-[0_0_60px_rgba(250,69,140,0.4)] border border-primary/30 bg-black/20 backdrop-blur-sm">
                 <div className="relative w-full aspect-video">
                   <iframe 
-                    src="https://www.youtube.com/embed/Jbnxsiz6t0A" 
-                    title="Vídeo em Destaque" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowFullScreen 
-                    loading="eager" 
+                    id="panda-c4636bc5-02bf-44a0-8720-2d686308ab6a" 
+                    src="https://player-vz-8fe9b8d6-aa4.tv.pandavideo.com.br/embed/?v=c4636bc5-02bf-44a0-8720-2d686308ab6a" 
+                    style={{ border: 'none' }}
+                    allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture" 
+                    allowFullScreen={true}
+                    loading="eager"
                     className="absolute inset-0 w-full h-full"
                   />
                 </div>
