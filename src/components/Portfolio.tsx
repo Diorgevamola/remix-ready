@@ -331,7 +331,7 @@ const Portfolio = () => {
     image: personagemRoxoOnca
   }, {
     title: "Guminha",
-    description: "",
+    description: "Personagem elegante",
     image: personagemTernoRoxo
   }, {
     title: "Vô Neco",
