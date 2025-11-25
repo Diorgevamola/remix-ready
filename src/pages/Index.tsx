@@ -12,6 +12,27 @@ const Index = () => {
     <div className="min-h-screen">
       <Navbar />
       <Hero />
+      
+      {/* Featured Video Section */}
+      <section className="py-12 md:py-16 relative overflow-hidden bg-black">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="relative w-full rounded-xl overflow-hidden shadow-[0_0_40px_rgba(250,69,140,0.3)] border border-primary/20">
+              <div className="relative w-full" style={{ aspectRatio: "16/9" }}>
+                <iframe
+                  src="https://www.youtube.com/embed/Jbnxsiz6t0A"
+                  title="Vídeo em Destaque"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  loading="lazy"
+                  className="absolute inset-0 w-full h-full"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
       <VideosSection />
       <Portfolio />
       
