@@ -6,6 +6,7 @@ import VideosSection from "@/components/VideosSection";
 import FAQ from "@/components/FAQ";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import { WebGLShader } from "@/components/ui/web-gl-shader";
 
 const Index = () => {
   return (
@@ -16,8 +17,15 @@ const Index = () => {
       <Portfolio />
       
       {/* CTA Section */}
-      <section className="py-16 md:py-20 relative overflow-hidden bg-gradient-to-br from-black via-primary/5 to-black">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(250,69,140,0.1),transparent_70%)]" />
+      <section className="py-16 md:py-20 relative overflow-hidden">
+        {/* WebGL Shader Background */}
+        <div className="absolute inset-0 w-full h-full">
+          <WebGLShader />
+        </div>
+        
+        {/* Dark overlay for better text contrast */}
+        <div className="absolute inset-0 bg-black/40" />
+        
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center space-y-6">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold">
