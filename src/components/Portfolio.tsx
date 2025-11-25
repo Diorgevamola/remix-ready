@@ -230,7 +230,7 @@ const Portfolio = () => {
     description: "Cachorrinho animado",
     image: cachorroPanikeka
   }, {
-    title: "Chef Uairango",
+    title: "Ranguito",
     description: "Uairango",
     image: chefUairango
   }, {
