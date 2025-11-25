@@ -238,7 +238,7 @@ const Portfolio = () => {
     description: "Cabelo branco",
     image: cientistaCabeloBranco
   }, {
-    title: "Cobra",
+    title: "Judith a Venenosa",
     description: "Rosa e amarela",
     image: cobraRosaAmarela
   }, {
