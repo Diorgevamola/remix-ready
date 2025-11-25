@@ -262,7 +262,7 @@ const Portfolio = () => {
     description: "Partimpim",
     image: guitarristaBoaVermelho
   }, {
-    title: "Livro ",
+    title: "Tijolinho",
     description: "TV Aparecida",
     image: mascoteLivroCapacete
   }, {
