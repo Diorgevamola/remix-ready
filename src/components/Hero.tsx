@@ -23,7 +23,7 @@ const Hero = () => {
         <div className="max-w-5xl mx-auto space-y-8 md:space-y-12 animate-fade-in">
           
           {/* Hero Text */}
-          <div className="text-center space-y-4 md:space-y-6">
+          <div className="text-center space-y-6 md:space-y-8">
             <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight [text-shadow:_0_2px_8px_rgb(0_0_0_/_60%)]">
               Damos Vida A Personagens
               <span className="block bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent mt-2 [text-shadow:_0_0_30px_hsl(var(--primary)_/_0.5)]">
@@ -34,20 +34,20 @@ const Hero = () => {
             <p className="text-base sm:text-lg lg:text-xl text-foreground/90 max-w-3xl mx-auto [text-shadow:_0_2px_8px_rgb(0_0_0_/_60%)]">
               Os Fantoches Zucco Puppets podem ser vistos hoje em diversos programas de televisão, comerciais, influencers, conteúdos online e muito mais.
             </p>
-          </div>
 
-          {/* Featured Video */}
-          <div className="w-full">
-            <div className="relative rounded-2xl overflow-hidden shadow-[0_0_60px_rgba(250,69,140,0.4)] border border-primary/30 bg-black/20 backdrop-blur-sm">
-              <div className="relative w-full aspect-video">
-                <iframe 
-                  src="https://www.youtube.com/embed/Jbnxsiz6t0A" 
-                  title="Vídeo em Destaque" 
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                  allowFullScreen 
-                  loading="eager" 
-                  className="absolute inset-0 w-full h-full"
-                />
+            {/* Featured Video */}
+            <div className="w-full pt-4">
+              <div className="relative rounded-2xl overflow-hidden shadow-[0_0_60px_rgba(250,69,140,0.4)] border border-primary/30 bg-black/20 backdrop-blur-sm">
+                <div className="relative w-full aspect-video">
+                  <iframe 
+                    src="https://www.youtube.com/embed/Jbnxsiz6t0A" 
+                    title="Vídeo em Destaque" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowFullScreen 
+                    loading="eager" 
+                    className="absolute inset-0 w-full h-full"
+                  />
+                </div>
               </div>
             </div>
           </div>
