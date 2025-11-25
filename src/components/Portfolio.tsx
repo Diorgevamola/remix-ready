@@ -326,7 +326,7 @@ const Portfolio = () => {
     description: "TV Aparecida",
     image: personagemRoupaRoxa
   }, {
-    title: "Personagem Roxo",
+    title: "Croki",
     description: "Onça",
     image: personagemRoxoOnca
   }, {
