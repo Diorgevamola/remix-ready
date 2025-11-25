@@ -286,7 +286,7 @@ const Portfolio = () => {
     description: "Cabelo laranja",
     image: meninoCabeloLaranja
   }, {
-    title: "Menino",
+    title: "Domingos",
     description: "TV Aparecida",
     image: meninoOculosMacacao
   }, {
