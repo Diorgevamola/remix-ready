@@ -138,7 +138,7 @@ const Portfolio = () => {
     description: "",
     image: alienigena
   }, {
-    title: "Livro Laranja",
+    title: "Guguinho",
     description: "Mascote educativo",
     image: livroLaranja
   }, {
