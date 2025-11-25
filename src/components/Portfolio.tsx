@@ -147,7 +147,7 @@ const Portfolio = () => {
     image: esqueleto
   }, {
     title: "Homem de óculos",
-    description: "Com óculos",
+    description: "",
     image: personagemOculos
   }, {
     title: "Théo",
