@@ -13,10 +13,7 @@ const Hero = () => {
       <div className="absolute inset-0 bg-[image:var(--gradient-hero)]" />
 
       {/* Background Image */}
-      <div className="absolute inset-0 z-0">
-        <img src={rodrigoPuppets} alt="" className="w-full h-full object-cover object-top opacity-40" loading="eager" fetchPriority="high" />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/90 via-background/85 to-background/95" />
-      </div>
+      
 
       {/* Animated Glow Effects */}
       <div className="absolute top-20 left-10 w-72 h-72 bg-primary/30 rounded-full blur-[100px] animate-float" />
@@ -43,15 +40,10 @@ const Hero = () => {
             {/* Featured Video */}
             <div className="w-full max-w-4xl mx-auto mt-6 sm:mt-8">
               <div className="relative w-full rounded-xl overflow-hidden shadow-[0_0_40px_rgba(250,69,140,0.3)] border border-primary/20">
-                <div className="relative w-full" style={{ aspectRatio: "16/9" }}>
-                  <iframe
-                    src="https://www.youtube.com/embed/Jbnxsiz6t0A"
-                    title="Vídeo em Destaque"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    loading="eager"
-                    className="absolute inset-0 w-full h-full"
-                  />
+                <div className="relative w-full" style={{
+                aspectRatio: "16/9"
+              }}>
+                  <iframe src="https://www.youtube.com/embed/Jbnxsiz6t0A" title="Vídeo em Destaque" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen loading="eager" className="absolute inset-0 w-full h-full" />
                 </div>
               </div>
             </div>
