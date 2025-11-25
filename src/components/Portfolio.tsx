@@ -235,7 +235,7 @@ const Portfolio = () => {
     image: chefUairango
   }, {
     title: "Cientista",
-    description: "Cabelo branco",
+    description: "",
     image: cientistaCabeloBranco
   }, {
     title: "Judith a Venenosa",
