@@ -139,7 +139,7 @@ const Portfolio = () => {
     image: alienigena
   }, {
     title: "Guguinho",
-    description: "Mascote educativo",
+    description: "TV do Dudu",
     image: livroLaranja
   }, {
     title: "Esqueleto",
