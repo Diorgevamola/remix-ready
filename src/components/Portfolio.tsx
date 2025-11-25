@@ -266,7 +266,7 @@ const Portfolio = () => {
     description: "TV Aparecida",
     image: mascoteLivroCapacete
   }, {
-    title: "Pedrinho",
+    title: "Olívia",
     description: "Turma do Frederico",
     image: meninaCabeloCastanho
   }, {
