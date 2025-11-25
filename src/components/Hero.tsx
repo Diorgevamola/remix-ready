@@ -61,6 +61,11 @@ const Hero = () => {
                 </div>
               </div>
             </div>
+
+            {/* Scroll Indicator */}
+            <div className="flex justify-center animate-bounce pt-4 md:pt-6">
+              <ChevronsDown className="w-6 h-6 md:w-8 md:h-8 text-primary/70" />
+            </div>
           </div>
 
           {/* Stats */}
@@ -73,11 +78,6 @@ const Hero = () => {
               <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-secondary [text-shadow:_0_2px_8px_rgb(0_0_0_/_60%)]">15+</div>
               <div className="text-xs sm:text-sm md:text-base text-muted-foreground [text-shadow:_0_2px_8px_rgb(0_0_0_/_60%)]">Anos de Experiência</div>
             </div>
-          </div>
-
-          {/* Scroll Indicator */}
-          <div className="flex justify-center animate-bounce pt-4 md:pt-8">
-            <ChevronsDown className="w-6 h-6 md:w-8 md:h-8 text-primary/70" />
           </div>
 
         </div>
