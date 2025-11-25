@@ -258,7 +258,7 @@ const Portfolio = () => {
     description: "Cinza",
     image: golfinhoCinza
   }, {
-    title: "Guitarrista",
+    title: "Adrianinha",
     description: "Boa vermelho",
     image: guitarristaBoaVermelho
   }, {
