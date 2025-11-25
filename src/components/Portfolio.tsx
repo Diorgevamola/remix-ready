@@ -322,7 +322,7 @@ const Portfolio = () => {
     description: "Marrom e laranja",
     image: personagemMarromLaranja
   }, {
-    title: "Personagem",
+    title: "Cidinha",
     description: "TV Aparecida",
     image: personagemRoupaRoxa
   }, {
