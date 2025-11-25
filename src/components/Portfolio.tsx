@@ -287,7 +287,7 @@ const Portfolio = () => {
     image: meninoCabeloLaranja
   }, {
     title: "Menino",
-    description: "Óculos e macacão",
+    description: "TV Aparecida",
     image: meninoOculosMacacao
   }, {
     title: "Monstro Ciano",
