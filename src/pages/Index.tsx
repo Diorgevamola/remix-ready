@@ -6,12 +6,10 @@ import VideosSection from "@/components/VideosSection";
 import FAQ from "@/components/FAQ";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
-import { WebGLShader } from "@/components/ui/web-gl-shader";
 
 const Index = () => {
   return (
     <div className="min-h-screen">
-      <WebGLShader />
       <Navbar />
       <Hero />
       <VideosSection />
