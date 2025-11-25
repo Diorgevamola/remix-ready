@@ -175,7 +175,7 @@ const Portfolio = () => {
     image: nutrao
   }, {
     title: "Homem de Bigode",
-    description: "Personagem adulto",
+    description: "",
     image: homemBigode
   }, {
     title: "Prof. Adalberto",
