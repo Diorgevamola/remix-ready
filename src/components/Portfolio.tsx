@@ -186,7 +186,7 @@ const Portfolio = () => {
     description: "Fantoche medieval",
     image: guerreiro
   }, {
-    title: "Monstro Roxo",
+    title: "Monstrinho Roxo",
     description: "De suéter",
     image: monstroRoxoSueter
   }, {
