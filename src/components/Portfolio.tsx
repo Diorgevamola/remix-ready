@@ -299,7 +299,7 @@ const Portfolio = () => {
     image: monstroPeludoAmarelo
   }, {
     title: "Raminho",
-    description: "Cabelo preto",
+    description: "Ramos de Trigo",
     image: monstroRosaCabeloPreto
   }, {
     title: "Monstro Verde",
