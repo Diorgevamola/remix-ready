@@ -291,7 +291,7 @@ const Portfolio = () => {
     image: meninoOculosMacacao
   }, {
     title: "Creitinho",
-    description: "Peludo",
+    description: "",
     image: monstroCianoPeludo
   }, {
     title: "Monstro Peludo",
