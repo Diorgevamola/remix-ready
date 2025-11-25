@@ -231,7 +231,7 @@ const Portfolio = () => {
     image: cachorroPanikeka
   }, {
     title: "Chef Uairango",
-    description: "Cozinheiro profissional",
+    description: "Uairango",
     image: chefUairango
   }, {
     title: "Cientista",
