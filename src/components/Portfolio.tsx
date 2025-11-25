@@ -239,7 +239,7 @@ const Portfolio = () => {
     image: cientistaCabeloBranco
   }, {
     title: "Judith a Venenosa",
-    description: "Rosa e amarela",
+    description: "TV Record Minas",
     image: cobraRosaAmarela
   }, {
     title: "Bob",
