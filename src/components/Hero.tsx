@@ -40,11 +40,20 @@ const Hero = () => {
 
             <p className="text-sm sm:text-lg lg:text-xl text-foreground/90 max-w-2xl mx-auto [text-shadow:_0_2px_8px_rgb(0_0_0_/_60%)]">Os Fantoches Zucco Puppets podem ser vistos hoje em diversos programas de televisão, comerciais, influencers, conteúdos online e muito mais.</p>
 
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
-              <Button variant="hero" size="xl" onClick={scrollToPortfolio} className="group w-full sm:w-auto">
-                Veja Nossos Trabalhos
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
+            {/* Featured Video */}
+            <div className="w-full max-w-4xl mx-auto mt-6 sm:mt-8">
+              <div className="relative w-full rounded-xl overflow-hidden shadow-[0_0_40px_rgba(250,69,140,0.3)] border border-primary/20">
+                <div className="relative w-full" style={{ aspectRatio: "16/9" }}>
+                  <iframe
+                    src="https://www.youtube.com/embed/Jbnxsiz6t0A"
+                    title="Vídeo em Destaque"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    loading="eager"
+                    className="absolute inset-0 w-full h-full"
+                  />
+                </div>
+              </div>
             </div>
 
             {/* Stats */}
