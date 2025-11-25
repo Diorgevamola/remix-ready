@@ -223,7 +223,7 @@ const Portfolio = () => {
     image: rosePuppet
   }, {
     title: "Etefânio",
-    description: "Com antenas",
+    description: "",
     image: alienVerdeAntenas
   }, {
     title: "Pankeka",
