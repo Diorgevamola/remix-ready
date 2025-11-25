@@ -13,7 +13,7 @@ const Hero = () => {
   return (
     <section className="relative min-h-[100dvh] flex items-center justify-center overflow-hidden">
       {/* WebGL Shader Background */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 w-full h-full">
         <WebGLShader />
       </div>
       
