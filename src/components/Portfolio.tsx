@@ -187,7 +187,7 @@ const Portfolio = () => {
     image: guerreiro
   }, {
     title: "Monstrinho Roxo",
-    description: "De suéter",
+    description: "",
     image: monstroRoxoSueter
   }, {
     title: "Cachorro Amarelo",
