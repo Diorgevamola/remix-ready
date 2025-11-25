@@ -307,7 +307,7 @@ const Portfolio = () => {
     image: monstroVerdeOculos
   }, {
     title: "Panda",
-    description: "Chapéu colorido",
+    description: "Vizzela Cosméticos",
     image: pandaChapeuColorido
   }, {
     title: "Personagem Amarelo",
