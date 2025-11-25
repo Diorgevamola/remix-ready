@@ -146,7 +146,7 @@ const Portfolio = () => {
     description: "Fantoche de Halloween",
     image: esqueleto
   }, {
-    title: "Personagem de Óculos",
+    title: "Homem de óculos",
     description: "Com óculos",
     image: personagemOculos
   }, {
