@@ -2,6 +2,8 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles, ChevronsDown } from "lucide-react";
 import heroPuppet from "@/assets/imagens_webp/hero-puppet.webp";
 import rodrigoPuppets from "@/assets/imagens_webp/rodrigo-puppets.webp";
+import { WebGLShader } from "@/components/ui/web-gl-shader";
+
 const Hero = () => {
   const scrollToPortfolio = () => {
     document.getElementById("portfolio")?.scrollIntoView({
@@ -10,8 +12,13 @@ const Hero = () => {
   };
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Gradient Background */}
-      <div className="absolute inset-0 bg-[image:var(--gradient-hero)]" />
+      {/* WebGL Shader Background */}
+      <div className="absolute inset-0">
+        <WebGLShader />
+      </div>
+      
+      {/* Gradient Overlay */}
+      <div className="absolute inset-0 bg-[image:var(--gradient-hero)] opacity-30" />
 
       {/* Animated Glow Effects */}
       <div className="absolute top-20 left-10 w-72 h-72 bg-primary/30 rounded-full blur-[100px] animate-float" />
