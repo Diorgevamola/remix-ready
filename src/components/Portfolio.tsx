@@ -250,7 +250,7 @@ const Portfolio = () => {
     description: "",
     image: doutorBarbaCinza
   }, {
-    title: "Gato Laranja",
+    title: "Furão",
     description: "Animado",
     image: gatoLaranjaAnimado
   }, {
