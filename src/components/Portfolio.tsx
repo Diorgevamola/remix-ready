@@ -271,7 +271,7 @@ const Portfolio = () => {
     image: meninaCabeloCastanho
   }, {
     title: "Pedrinho",
-    description: "Camiseta verde",
+    description: "Turma do Frederico",
     image: meninaCamisetaVerde
   }, {
     title: "Menina",
