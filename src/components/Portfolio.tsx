@@ -222,7 +222,7 @@ const Portfolio = () => {
     description: "A mulher dos zoi azul",
     image: rosePuppet
   }, {
-    title: "Alien Verde",
+    title: "Etefânio",
     description: "Com antenas",
     image: alienVerdeAntenas
   }, {
