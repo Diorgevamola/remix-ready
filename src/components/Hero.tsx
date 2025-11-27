@@ -64,7 +64,7 @@ const Hero = () => {
 
             {/* Scroll Indicator */}
             <div className="flex justify-center animate-bounce pt-4 md:pt-6">
-              <ChevronsDown className="w-6 h-6 md:w-8 md:h-8 text-primary/70" />
+              <ChevronsDown className="w-8 h-8 md:w-12 md:h-12 text-primary drop-shadow-[0_0_8px_hsl(var(--primary))] [filter:drop-shadow(0_0_12px_hsl(var(--primary)/_0.6))]" />
             </div>
           </div>
 
