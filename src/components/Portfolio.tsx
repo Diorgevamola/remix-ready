@@ -37,7 +37,6 @@ import astronautaVerde from "@/assets/imagens_webp/astronauta_verde.webp";
 import cientistaOculos from "@/assets/imagens_webp/cientista_oculos.webp";
 import sarele from "@/assets/imagens_webp/sarele.webp";
 import bonecoGorroVermelho from "@/assets/imagens_webp/boneco_gorro_vermelho.webp";
-import rosePuppet from "@/assets/imagens_webp/rose_puppet.webp";
 import alienVerdeAntenas from "@/assets/imagens_webp/alien_verde_antenas.webp";
 import cachorroPanikeka from "@/assets/imagens_webp/cachorro_panikeka.webp";
 import chefUairango from "@/assets/imagens_webp/chef_uairango.webp";
@@ -80,7 +79,6 @@ import cachorroBranco from "@/assets/imagens_webp/cachorro_branco.webp";
 import meninoLencoAzul from "@/assets/imagens_webp/menino_lenco_azul.webp";
 import roboTeclado from "@/assets/imagens_webp/robo_teclado.webp";
 import meninaCabeloAmarelo from "@/assets/imagens_webp/menina_cabelo_amarelo.webp";
-import cachorroTrabalhador2 from "@/assets/imagens_webp/cachorro_trabalhador_2.webp";
 import meninoTribal from "@/assets/imagens_webp/menino_tribal.webp";
 import ursoAmareloPeludo from "@/assets/imagens_webp/urso_amarelo_peludo.webp";
 import fantocheAzulCinza from "@/assets/imagens_webp/fantoche_azul_cinza.jpg";
@@ -238,10 +236,6 @@ const Portfolio = () => {
     title: "Dente",
     description: "Mascote dental",
     image: dente
-  }, {
-    title: "Rose Puppet",
-    description: "A mulher dos zoi azul",
-    image: rosePuppet
   }, {
     title: "Etefânio",
     description: "",
@@ -410,10 +404,6 @@ const Portfolio = () => {
     title: "Menina Cabelo Amarelo",
     description: "Coleção Monstrinhos",
     image: meninaCabeloAmarelo
-  }, {
-    title: "Cachorro Trabalhador",
-    description: "Coleção Monstrinhos",
-    image: cachorroTrabalhador2
   }, {
     title: "Menino Tribal",
     description: "Coleção Monstrinhos",
