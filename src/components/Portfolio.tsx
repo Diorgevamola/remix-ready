@@ -82,6 +82,7 @@ import roboTeclado from "@/assets/imagens_webp/robo_teclado.webp";
 import meninaCabeloAmarelo from "@/assets/imagens_webp/menina_cabelo_amarelo.webp";
 import cachorroTrabalhador2 from "@/assets/imagens_webp/cachorro_trabalhador_2.webp";
 import meninoTribal from "@/assets/imagens_webp/menino_tribal.webp";
+import ursoAmareloPeludo from "@/assets/imagens_webp/urso_amarelo_peludo.webp";
 const Portfolio = () => {
   const portfolioItems = [{
     title: "Carinhoso",
@@ -411,6 +412,10 @@ const Portfolio = () => {
     title: "Menino Tribal",
     description: "Coleção Monstrinhos",
     image: meninoTribal
+  }, {
+    title: "Urso Amarelo",
+    description: "Peludo amarelo",
+    image: ursoAmareloPeludo
   }];
 
   // Split into 7 rows
