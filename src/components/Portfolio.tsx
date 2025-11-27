@@ -78,6 +78,10 @@ import alienJaleco from "@/assets/imagens_webp/alien_jaleco.webp";
 import senhoraOculosVermelhos from "@/assets/imagens_webp/senhora_oculos_vermelhos.webp";
 import cachorroBranco from "@/assets/imagens_webp/cachorro_branco.webp";
 import meninoLencoAzul from "@/assets/imagens_webp/menino_lenco_azul.webp";
+import roboTeclado from "@/assets/imagens_webp/robo_teclado.webp";
+import meninaCabeloAmarelo from "@/assets/imagens_webp/menina_cabelo_amarelo.webp";
+import cachorroTrabalhador2 from "@/assets/imagens_webp/cachorro_trabalhador_2.webp";
+import meninoTribal from "@/assets/imagens_webp/menino_tribal.webp";
 const Portfolio = () => {
   const portfolioItems = [{
     title: "Carinhoso",
@@ -391,6 +395,22 @@ const Portfolio = () => {
     title: "Menino do Lenço",
     description: "Lenço azul",
     image: meninoLencoAzul
+  }, {
+    title: "Robô Computador",
+    description: "Coleção Monstrinhos",
+    image: roboTeclado
+  }, {
+    title: "Menina Cabelo Amarelo",
+    description: "Coleção Monstrinhos",
+    image: meninaCabeloAmarelo
+  }, {
+    title: "Cachorro Trabalhador",
+    description: "Coleção Monstrinhos",
+    image: cachorroTrabalhador2
+  }, {
+    title: "Menino Tribal",
+    description: "Coleção Monstrinhos",
+    image: meninoTribal
   }];
 
   // Split into 7 rows
