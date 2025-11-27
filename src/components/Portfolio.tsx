@@ -68,6 +68,16 @@ import personagemRoxoOnca from "@/assets/imagens_webp/personagem_roxo_onca.webp"
 import personagemTernoRoxo from "@/assets/imagens_webp/personagem_terno_roxo.webp";
 import senhorBigodeOculos from "@/assets/imagens_webp/senhor_bigode_oculos.webp";
 import senhorOculosColetelaranja from "@/assets/imagens_webp/senhor_oculos_colete_laranja.webp";
+import gemeasZ from "@/assets/imagens_webp/gemeas_z.webp";
+import chefOculosEscuros from "@/assets/imagens_webp/chef_oculos_escuros.webp";
+import cachorroTrabalhador from "@/assets/imagens_webp/cachorro_trabalhador.webp";
+import cachorroColeira from "@/assets/imagens_webp/cachorro_coleira.webp";
+import cachorroHelicoptero from "@/assets/imagens_webp/cachorro_helicoptero.webp";
+import senhorChapeuPreto from "@/assets/imagens_webp/senhor_chapeu_preto.webp";
+import alienJaleco from "@/assets/imagens_webp/alien_jaleco.webp";
+import senhoraOculosVermelhos from "@/assets/imagens_webp/senhora_oculos_vermelhos.webp";
+import cachorroBranco from "@/assets/imagens_webp/cachorro_branco.webp";
+import meninoLencoAzul from "@/assets/imagens_webp/menino_lenco_azul.webp";
 const Portfolio = () => {
   const portfolioItems = [{
     title: "Carinhoso",
@@ -341,6 +351,46 @@ const Portfolio = () => {
     title: "Vô Neco",
     description: "Turma do Frederico",
     image: senhorOculosColetelaranja
+  }, {
+    title: "Gêmeas Z",
+    description: "Irmãs",
+    image: gemeasZ
+  }, {
+    title: "Chef de Óculos",
+    description: "Cozinheiro estiloso",
+    image: chefOculosEscuros
+  }, {
+    title: "Cachorro Trabalhador",
+    description: "Operário",
+    image: cachorroTrabalhador
+  }, {
+    title: "Cachorro de Coleira",
+    description: "Peludo amarelo",
+    image: cachorroColeira
+  }, {
+    title: "Cachorro Helicóptero",
+    description: "Com hélice",
+    image: cachorroHelicoptero
+  }, {
+    title: "Senhor de Chapéu",
+    description: "Barba e bigode",
+    image: senhorChapeuPreto
+  }, {
+    title: "Alienígena de Jaleco",
+    description: "Cientista verde",
+    image: alienJaleco
+  }, {
+    title: "Senhora de Óculos",
+    description: "Óculos vermelhos",
+    image: senhoraOculosVermelhos
+  }, {
+    title: "Cachorro Branco",
+    description: "Peludo branco",
+    image: cachorroBranco
+  }, {
+    title: "Menino do Lenço",
+    description: "Lenço azul",
+    image: meninoLencoAzul
   }];
 
   // Split into 7 rows
