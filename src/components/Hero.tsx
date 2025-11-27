@@ -82,6 +82,9 @@ const Hero = () => {
 
         </div>
       </div>
+
+      {/* Smooth gradient transition to next section */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 md:h-48 bg-gradient-to-b from-transparent via-black/50 to-black pointer-events-none z-20" />
     </section>
   );
 };

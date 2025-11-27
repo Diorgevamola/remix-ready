@@ -20,7 +20,10 @@ const VideosSection = () => {
     },
   ];
   return (
-    <section className="py-16 md:py-20 relative overflow-hidden bg-gradient-to-br from-black via-primary/5 to-black">
+    <section className="pt-8 pb-16 md:pt-12 md:pb-20 relative overflow-hidden bg-gradient-to-br from-black via-primary/5 to-black">
+      {/* Smooth gradient transition from Hero */}
+      <div className="absolute top-0 left-0 right-0 h-24 md:h-32 bg-gradient-to-b from-black via-black/80 to-transparent pointer-events-none z-10" />
+      
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(250,69,140,0.08),transparent_70%)]" />
 
       <div className="container mx-auto px-4 relative z-10">
