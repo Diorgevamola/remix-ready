@@ -83,6 +83,12 @@ import meninaCabeloAmarelo from "@/assets/imagens_webp/menina_cabelo_amarelo.web
 import cachorroTrabalhador2 from "@/assets/imagens_webp/cachorro_trabalhador_2.webp";
 import meninoTribal from "@/assets/imagens_webp/menino_tribal.webp";
 import ursoAmareloPeludo from "@/assets/imagens_webp/urso_amarelo_peludo.webp";
+import fantocheAzulCinza from "@/assets/imagens_webp/fantoche_azul_cinza.jpg";
+import fantocheRoxoLantejoulas from "@/assets/imagens_webp/fantoche_roxo_lantejoulas.jpg";
+import fantocheLoiroBlazer from "@/assets/imagens_webp/fantoche_loiro_blazer.jpg";
+import fantocheBebeChupeta from "@/assets/imagens_webp/fantoche_bebe_chupeta.jpg";
+import fantocheLoiraVermelho from "@/assets/imagens_webp/fantoche_loira_vermelho.jpg";
+import grupoFantoches from "@/assets/imagens_webp/grupo_fantoches.jpg";
 const Portfolio = () => {
   const portfolioItems = [{
     title: "Carinhoso",
@@ -416,6 +422,30 @@ const Portfolio = () => {
     title: "Urso Amarelo",
     description: "Peludo amarelo",
     image: ursoAmareloPeludo
+  }, {
+    title: "Fantoche Azul",
+    description: "Personagem com camisa cinza",
+    image: fantocheAzulCinza
+  }, {
+    title: "Fantoche de Lantejoulas",
+    description: "Personagem com vestido rosa",
+    image: fantocheRoxoLantejoulas
+  }, {
+    title: "Fantoche Loira Elegante",
+    description: "Personagem com blazer branco",
+    image: fantocheLoiroBlazer
+  }, {
+    title: "Bebê Fantoche",
+    description: "Bebê com chupeta rosa",
+    image: fantocheBebeChupeta
+  }, {
+    title: "Fantoche Vestido Vermelho",
+    description: "Personagem loira glamourosa",
+    image: fantocheLoiraVermelho
+  }, {
+    title: "Grupo de Fantoches",
+    description: "Família de personagens",
+    image: grupoFantoches
   }];
 
   // Reorganizar para agrupar Coleção Monstrinhos
