@@ -385,7 +385,7 @@ const Portfolio = () => {
     image: alienJaleco
   }, {
     title: "Senhora de Óculos",
-    description: "Óculos vermelhos",
+    description: "Círculo Escola",
     image: senhoraOculosVermelhos
   }, {
     title: "Cachorro Branco",
