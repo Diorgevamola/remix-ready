@@ -401,7 +401,7 @@ const Portfolio = () => {
     image: roboTeclado
   }, {
     title: "Ipeúva",
-    description: "Coleção Monstrinhos",
+    description: "Turma do Frederico",
     image: meninaCabeloAmarelo
   }, {
     title: "Menino Tribal",
