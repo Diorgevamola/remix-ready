@@ -384,7 +384,7 @@ const Portfolio = () => {
     description: "Circulo Escola",
     image: alienJaleco
   }, {
-    title: "Senhora de Óculos",
+    title: "Jandyra",
     description: "Círculo Escola",
     image: senhoraOculosVermelhos
   }, {
