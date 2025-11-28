@@ -380,7 +380,7 @@ const Portfolio = () => {
     description: "Barba e bigode",
     image: senhorChapeuPreto
   }, {
-    title: "Alienígena de Jaleco",
+    title: "Verdolino",
     description: "Circulo Escola",
     image: alienJaleco
   }, {
