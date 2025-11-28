@@ -241,7 +241,7 @@ const Portfolio = () => {
     image: alienVerdeAntenas
   }, {
     title: "Pankeka",
-    description: "Cachorrinho animado",
+    description: "",
     image: cachorroPanikeka
   }, {
     title: "Ranguito",
