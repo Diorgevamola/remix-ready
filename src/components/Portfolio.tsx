@@ -365,7 +365,7 @@ const Portfolio = () => {
     image: chefOculosEscuros
   }, {
     title: "Lobo",
-    description: "Operário",
+    description: "Mentes Notáveis",
     image: cachorroTrabalhador
   }, {
     title: "Cachorro de Coleira",
