@@ -389,7 +389,7 @@ const Portfolio = () => {
     image: senhoraOculosVermelhos
   }, {
     title: "Cachorro Branco",
-    description: "Peludo branco",
+    description: "Circulo Escola",
     image: cachorroBranco
   }, {
     title: "Menino do Lenço",
