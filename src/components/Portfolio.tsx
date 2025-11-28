@@ -417,7 +417,7 @@ const Portfolio = () => {
     image: fantocheAzulCinza
   }, {
     title: "Fantoche de Lantejoulas",
-    description: "Personagem com vestido rosa",
+    description: "Dr. Montedonio",
     image: fantocheRoxoLantejoulas
   }, {
     title: "Fantoche Loira Elegante",
