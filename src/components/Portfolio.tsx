@@ -372,7 +372,7 @@ const Portfolio = () => {
     description: "Pinn Pet",
     image: cachorroColeira
   }, {
-    title: "Cachorro Helicóptero",
+    title: "DIDI",
     description: "Com hélice",
     image: cachorroHelicoptero
   }, {
