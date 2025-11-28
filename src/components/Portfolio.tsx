@@ -357,7 +357,7 @@ const Portfolio = () => {
     description: "Turma do Frederico",
     image: senhorOculosColetelaranja
   }, {
-    title: "Gêmeas Z",
+    title: "Gêmeas Luzias",
     description: "Irmãs",
     image: gemeasZ
   }, {
