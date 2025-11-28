@@ -400,7 +400,7 @@ const Portfolio = () => {
     description: "Coleção Monstrinhos",
     image: roboTeclado
   }, {
-    title: "Menina Cabelo Amarelo",
+    title: "Ipeúva",
     description: "Coleção Monstrinhos",
     image: meninaCabeloAmarelo
   }, {
