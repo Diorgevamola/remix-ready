@@ -377,7 +377,7 @@ const Portfolio = () => {
     image: cachorroHelicoptero
   }, {
     title: "Senhor Libório",
-    description: "Barba e bigode",
+    description: "",
     image: senhorChapeuPreto
   }, {
     title: "Verdolino",
