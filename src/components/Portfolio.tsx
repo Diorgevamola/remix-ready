@@ -86,7 +86,6 @@ import fantocheRoxoLantejoulas from "@/assets/imagens_webp/fantoche_roxo_lantejo
 import fantocheLoiroBlazer from "@/assets/imagens_webp/fantoche_loiro_blazer.jpg";
 import fantocheBebeChupeta from "@/assets/imagens_webp/fantoche_bebe_chupeta.jpg";
 import fantocheLoiraVermelho from "@/assets/imagens_webp/fantoche_loira_vermelho.jpg";
-import grupoFantoches from "@/assets/imagens_webp/grupo_fantoches.jpg";
 const Portfolio = () => {
   const portfolioItems = [{
     title: "Carinhoso",
@@ -432,10 +431,6 @@ const Portfolio = () => {
     title: "Fantoche Vestido Vermelho",
     description: "Personagem loira glamourosa",
     image: fantocheLoiraVermelho
-  }, {
-    title: "Grupo de Fantoches",
-    description: "Família de personagens",
-    image: grupoFantoches
   }];
 
   // Reorganizar para agrupar Coleção Monstrinhos
