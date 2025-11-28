@@ -428,7 +428,7 @@ const Portfolio = () => {
     description: "Dr. Montedonio",
     image: fantocheBebeChupeta
   }, {
-    title: "Fantoche Vestido Vermelho",
+    title: "Mulher Loira ",
     description: "Dr. Montedonio",
     image: fantocheLoiraVermelho
   }];
