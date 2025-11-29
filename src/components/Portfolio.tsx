@@ -128,6 +128,26 @@ const Portfolio = () => {
     description: "",
     image: fada
   }, {
+    title: "Jandyra",
+    description: "Círculo Escola",
+    image: senhoraOculosVermelhos
+  }, {
+    title: "Dudu",
+    description: "Circulo Escola",
+    image: cachorroBranco
+  }, {
+    title: "Verdolino",
+    description: "Circulo Escola",
+    image: alienJaleco
+  }, {
+    title: "DIDI",
+    description: "",
+    image: cachorroHelicoptero
+  }, {
+    title: "Pinnpet",
+    description: "Pinn Pet",
+    image: cachorroColeira
+  }, {
     title: "Bíblia",
     description: "",
     image: biblia
@@ -376,29 +396,9 @@ const Portfolio = () => {
     description: "Cozinheiro estiloso",
     image: chefOculosEscuros
   }, {
-    title: "Pinnpet",
-    description: "Pinn Pet",
-    image: cachorroColeira
-  }, {
-    title: "DIDI",
-    description: "",
-    image: cachorroHelicoptero
-  }, {
     title: "Senhor Libório",
     description: "",
     image: senhorChapeuPreto
-  }, {
-    title: "Verdolino",
-    description: "Circulo Escola",
-    image: alienJaleco
-  }, {
-    title: "Jandyra",
-    description: "Círculo Escola",
-    image: senhoraOculosVermelhos
-  }, {
-    title: "Dudu",
-    description: "Circulo Escola",
-    image: cachorroBranco
   }, {
     title: "Menino do Lenço",
     description: "",
