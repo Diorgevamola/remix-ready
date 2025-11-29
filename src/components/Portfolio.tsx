@@ -88,6 +88,26 @@ import fantocheBebeChupeta from "@/assets/imagens_webp/fantoche_bebe_chupeta.jpg
 import fantocheLoiraVermelho from "@/assets/imagens_webp/fantoche_loira_vermelho.jpg";
 const Portfolio = () => {
   const portfolioItems = [{
+    title: "Judith a Venenosa",
+    description: "TV Record Minas",
+    image: cobraRosaAmarela
+  }, {
+    title: "Etefânio",
+    description: "",
+    image: alienVerdeAntenas
+  }, {
+    title: "Ipeúva",
+    description: "Turma do Frederico",
+    image: meninaCabeloAmarelo
+  }, {
+    title: "Jaguar",
+    description: "Turma do Frederico",
+    image: meninoTribal
+  }, {
+    title: "Lobo",
+    description: "Mentes Notáveis",
+    image: cachorroTrabalhador
+  }, {
     title: "Carinhoso",
     description: "Danone Nutrícia",
     image: carinhoso
@@ -236,10 +256,6 @@ const Portfolio = () => {
     description: "Mascote dental",
     image: dente
   }, {
-    title: "Etefânio",
-    description: "",
-    image: alienVerdeAntenas
-  }, {
     title: "Pankeka",
     description: "",
     image: cachorroPanikeka
@@ -251,10 +267,6 @@ const Portfolio = () => {
     title: "Cientista",
     description: "",
     image: cientistaCabeloBranco
-  }, {
-    title: "Judith a Venenosa",
-    description: "TV Record Minas",
-    image: cobraRosaAmarela
   }, {
     title: "Bob",
     description: "Cozinheiro",
@@ -364,10 +376,6 @@ const Portfolio = () => {
     description: "Cozinheiro estiloso",
     image: chefOculosEscuros
   }, {
-    title: "Lobo",
-    description: "Mentes Notáveis",
-    image: cachorroTrabalhador
-  }, {
     title: "Pinnpet",
     description: "Pinn Pet",
     image: cachorroColeira
@@ -399,14 +407,6 @@ const Portfolio = () => {
     title: "Robô ",
     description: "Partimpim",
     image: roboTeclado
-  }, {
-    title: "Ipeúva",
-    description: "Turma do Frederico",
-    image: meninaCabeloAmarelo
-  }, {
-    title: "Jaguar",
-    description: "Turma do Frederico",
-    image: meninoTribal
   }, {
     title: "Kevin",
     description: "",
