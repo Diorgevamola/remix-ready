@@ -428,33 +428,9 @@ const Portfolio = () => {
     description: "",
     image: meninoLencoAzul
   }, {
-    title: "Robô ",
-    description: "Partimpim",
-    image: roboTeclado
-  }, {
     title: "Kevin",
     description: "",
     image: ursoAmareloPeludo
-  }, {
-    title: "Homem",
-    description: "Dr. Montedonio",
-    image: fantocheAzulCinza
-  }, {
-    title: "Mulher",
-    description: "Dr. Montedonio",
-    image: fantocheRoxoLantejoulas
-  }, {
-    title: "Morena Elegante",
-    description: "Dr. Montedônio",
-    image: fantocheLoiroBlazer
-  }, {
-    title: "Bebê Fantoche",
-    description: "Dr. Montedonio",
-    image: fantocheBebeChupeta
-  }, {
-    title: "Mulher Loira ",
-    description: "Dr. Montedonio",
-    image: fantocheLoiraVermelho
   }];
 
   // Reorganizar para agrupar Coleção Monstrinhos
