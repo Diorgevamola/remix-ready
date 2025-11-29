@@ -168,9 +168,45 @@ const Portfolio = () => {
     description: "Coleção Monstrinhos",
     image: monstroAmarelo
   }, {
+    title: "Chef de Óculos",
+    description: "Cozinheiro estiloso",
+    image: chefOculosEscuros
+  }, {
+    title: "Robô ",
+    description: "Partimpim",
+    image: roboTeclado
+  }, {
+    title: "Gêmeas Luzias",
+    description: "Irmãs",
+    image: gemeasZ
+  }, {
+    title: "Vô Neco",
+    description: "Turma do Frederico",
+    image: senhorOculosColetelaranja
+  }, {
     title: "Monstrinho Verde Nariz Rosa",
     description: "Coleção Monstrinhos",
     image: monstroVerde
+  }, {
+    title: "Homem",
+    description: "Dr. Montedonio",
+    image: fantocheAzulCinza
+  }, {
+    title: "Mulher",
+    description: "Dr. Montedonio",
+    image: fantocheRoxoLantejoulas
+  }, {
+    title: "Morena Elegante",
+    description: "Dr. Montedônio",
+    image: fantocheLoiroBlazer
+  }, {
+    title: "Bebê Fantoche",
+    description: "Dr. Montedonio",
+    image: fantocheBebeChupeta
+  }, {
+    title: "Mulher Loira ",
+    description: "Dr. Montedonio",
+    image: fantocheLoiraVermelho
   }, {
     title: "Monstrinho Verde Nariz Azul",
     description: "Coleção monstrinho",
@@ -383,18 +419,6 @@ const Portfolio = () => {
     title: "",
     description: "Bigode e óculos",
     image: senhorBigodeOculos
-  }, {
-    title: "Vô Neco",
-    description: "Turma do Frederico",
-    image: senhorOculosColetelaranja
-  }, {
-    title: "Gêmeas Luzias",
-    description: "Irmãs",
-    image: gemeasZ
-  }, {
-    title: "Chef de Óculos",
-    description: "Cozinheiro estiloso",
-    image: chefOculosEscuros
   }, {
     title: "Senhor Libório",
     description: "",
