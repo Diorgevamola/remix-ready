@@ -452,15 +452,16 @@ const Portfolio = () => {
   const monstrinhos = portfolioItems.filter(item => item.description.includes("Coleção Monstrinhos"));
   const outros = portfolioItems.filter(item => !item.description.includes("Coleção Monstrinhos"));
   
-  // Distribuir em 7 fileiras + última fileira com os monstrinhos no final
-  const row1 = outros.slice(0, 10);
-  const row2 = outros.slice(10, 20);
-  const row3 = outros.slice(20, 30);
-  const row4 = outros.slice(30, 40);
-  const row5 = outros.slice(40, 50);
-  const row6 = outros.slice(50, 60);
-  const row7 = outros.slice(60, 70);
-  const row8 = [...outros.slice(70), ...monstrinhos]; // Resto dos itens + monstrinhos no final
+  // Distribuir em 8 fileiras com 10 personagens cada + última fileira com o restante e monstrinhos
+  const row1 = portfolioItems.slice(0, 10);
+  const row2 = portfolioItems.slice(10, 20);
+  const row3 = portfolioItems.slice(20, 30);
+  const row4 = portfolioItems.slice(30, 40);
+  const row5 = portfolioItems.slice(40, 50);
+  const row6 = portfolioItems.slice(50, 60);
+  const row7 = portfolioItems.slice(60, 70);
+  const row8 = portfolioItems.slice(70, 80);
+  const row9 = [...portfolioItems.slice(80).filter(item => !item.description.includes("Coleção Monstrinhos")), ...monstrinhos];
   interface PortfolioRowProps {
     items: typeof portfolioItems;
     direction?: 'left' | 'right';
@@ -552,6 +553,7 @@ const Portfolio = () => {
           <PortfolioRow items={row6} direction="right" />
           <PortfolioRow items={row7} direction="left" />
           <PortfolioRow items={row8} direction="right" />
+          <PortfolioRow items={row9} direction="left" />
         </div>
       </div>
     </section>;
