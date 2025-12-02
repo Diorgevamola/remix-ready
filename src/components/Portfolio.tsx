@@ -452,16 +452,20 @@ const Portfolio = () => {
   const monstrinhos = portfolioItems.filter(item => item.description.includes("Coleção Monstrinhos"));
   const outros = portfolioItems.filter(item => !item.description.includes("Coleção Monstrinhos"));
   
+  // Separar Monstrinho Roxo e Cachorro Amarelo para colocar antes dos monstrinhos
+  const especiais = outros.filter(item => item.title === "Monstrinho Roxo" || item.title === "Cachorro Amarelo");
+  const outrosSemEspeciais = outros.filter(item => item.title !== "Monstrinho Roxo" && item.title !== "Cachorro Amarelo");
+  
   // Distribuir em 8 fileiras com 10 personagens cada (sem monstrinhos) + última fileira com o restante e monstrinhos
-  const row1 = outros.slice(0, 10);
-  const row2 = outros.slice(10, 20);
-  const row3 = outros.slice(20, 30);
-  const row4 = outros.slice(30, 40);
-  const row5 = outros.slice(40, 50);
-  const row6 = outros.slice(50, 60);
-  const row7 = outros.slice(60, 70);
-  const row8 = outros.slice(70, 80);
-  const row9 = [...outros.slice(80), ...monstrinhos]; // Resto dos outros + todos os monstrinhos
+  const row1 = outrosSemEspeciais.slice(0, 10);
+  const row2 = outrosSemEspeciais.slice(10, 20);
+  const row3 = outrosSemEspeciais.slice(20, 30);
+  const row4 = outrosSemEspeciais.slice(30, 40);
+  const row5 = outrosSemEspeciais.slice(40, 50);
+  const row6 = outrosSemEspeciais.slice(50, 60);
+  const row7 = outrosSemEspeciais.slice(60, 70);
+  const row8 = outrosSemEspeciais.slice(70, 80);
+  const row9 = [...outrosSemEspeciais.slice(80), ...especiais, ...monstrinhos]; // Resto + especiais + monstrinhos
   interface PortfolioRowProps {
     items: typeof portfolioItems;
     direction?: 'left' | 'right';
