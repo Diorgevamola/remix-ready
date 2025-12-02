@@ -436,7 +436,7 @@ const Portfolio = () => {
     image: ursoAmareloPeludo
   }, {
     title: "Valen",
-    description: "De óculos e colete",
+    description: "Iprodesc",
     image: alienígenaRoxoOculos
   }, {
     title: "Alienígena Azul",
