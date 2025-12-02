@@ -86,6 +86,9 @@ import fantocheRoxoLantejoulas from "@/assets/imagens_webp/fantoche_roxo_lantejo
 import fantocheLoiroBlazer from "@/assets/imagens_webp/fantoche_loiro_blazer.jpg";
 import fantocheBebeChupeta from "@/assets/imagens_webp/fantoche_bebe_chupeta.jpg";
 import fantocheLoiraVermelho from "@/assets/imagens_webp/fantoche_loira_vermelho.jpg";
+import alienígenaRoxoOculos from "@/assets/imagens_webp/alienigena_roxo_oculos.webp";
+import alienígenaAzulRosa from "@/assets/imagens_webp/alienigena_azul_rosa.webp";
+import personagemLaranjaAzul from "@/assets/imagens_webp/personagem_laranja_azul.webp";
 const Portfolio = () => {
   const portfolioItems = [{
     title: "Judith a Venenosa",
@@ -431,6 +434,18 @@ const Portfolio = () => {
     title: "Kevin",
     description: "",
     image: ursoAmareloPeludo
+  }, {
+    title: "Alienígena Roxo",
+    description: "De óculos e colete",
+    image: alienígenaRoxoOculos
+  }, {
+    title: "Alienígena Azul",
+    description: "Com roupa rosa",
+    image: alienígenaAzulRosa
+  }, {
+    title: "Personagem Laranja",
+    description: "Com capacete",
+    image: personagemLaranjaAzul
   }];
 
   // Reorganizar para agrupar Coleção Monstrinhos
