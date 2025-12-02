@@ -452,15 +452,15 @@ const Portfolio = () => {
   const monstrinhos = portfolioItems.filter(item => item.description.includes("Coleção Monstrinhos"));
   const outros = portfolioItems.filter(item => !item.description.includes("Coleção Monstrinhos"));
   
-  // Distribuir igualmente: 7 fileiras de ~10 itens + 1 fileira com monstrinhos (12 itens)
+  // Distribuir em 7 fileiras + última fileira com os monstrinhos no final
   const row1 = outros.slice(0, 10);
   const row2 = outros.slice(10, 20);
   const row3 = outros.slice(20, 30);
   const row4 = outros.slice(30, 40);
-  const row5 = monstrinhos; // Fileira exclusiva para Coleção Monstrinhos (12 itens)
-  const row6 = outros.slice(40, 50);
-  const row7 = outros.slice(50, 60);
-  const row8 = outros.slice(60); // 11 itens restantes
+  const row5 = outros.slice(40, 50);
+  const row6 = outros.slice(50, 60);
+  const row7 = outros.slice(60, 70);
+  const row8 = [...outros.slice(70), ...monstrinhos]; // Resto dos itens + monstrinhos no final
   interface PortfolioRowProps {
     items: typeof portfolioItems;
     direction?: 'left' | 'right';
