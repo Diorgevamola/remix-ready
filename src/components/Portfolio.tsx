@@ -212,7 +212,7 @@ const Portfolio = () => {
     image: fantocheLoiraVermelho
   }, {
     title: "Monstrinho Verde Nariz Azul",
-    description: "Coleção monstrinho",
+    description: "Coleção Monstrinhos",
     image: monstroVerdeNarizAzul
   }, {
     title: "Monstrinho Amarelo 2",
