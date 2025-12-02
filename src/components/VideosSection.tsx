@@ -20,7 +20,7 @@ const VideosSection = () => {
     },
   ];
   return (
-    <section className="pt-8 pb-16 md:pt-12 md:pb-20 relative overflow-hidden bg-gradient-to-br from-black via-primary/5 to-black">
+    <section id="videos" className="pt-8 pb-16 md:pt-12 md:pb-20 relative overflow-hidden bg-gradient-to-br from-black via-primary/5 to-black scroll-mt-20">
       {/* Smooth gradient transition from Hero */}
       <div className="absolute top-0 left-0 right-0 h-24 md:h-32 bg-gradient-to-b from-black via-black/80 to-transparent pointer-events-none z-10" />
       
