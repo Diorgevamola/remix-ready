@@ -1,10 +1,23 @@
+import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles, ChevronsDown } from "lucide-react";
 import heroPuppet from "@/assets/imagens_webp/hero-puppet.webp";
 import rodrigoPuppets from "@/assets/imagens_webp/rodrigo-puppets.webp";
 import { WebGLShader } from "@/components/ui/web-gl-shader";
 
+declare global {
+  interface Window {
+    gtag?: (...args: any[]) => void;
+  }
+}
+
 const Hero = () => {
+  // Google Ads conversion tracking
+  useEffect(() => {
+    if (window.gtag) {
+      window.gtag('event', 'conversion', {'send_to': 'AW-836775906/p0vGCJm3oaoBEOLfgI8D'});
+    }
+  }, []);
   const scrollToPortfolio = () => {
     document.getElementById("portfolio")?.scrollIntoView({
       behavior: "smooth"
