@@ -17,7 +17,7 @@ const Index = () => {
       <Portfolio />
       
       {/* CTA Section */}
-      <section className="py-16 md:py-20 relative overflow-hidden">
+      <section id="orcamento" className="py-16 md:py-20 relative overflow-hidden scroll-mt-20">
         {/* WebGL Shader Background */}
         <div className="absolute inset-0 w-full h-full">
           <WebGLShader />
