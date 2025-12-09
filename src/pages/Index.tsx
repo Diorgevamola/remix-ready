@@ -39,6 +39,11 @@ const Index = () => {
             </p>
             <button
               onClick={() => {
+                // Meta Pixel tracking
+                if (typeof (window as unknown as { fbq?: (...args: unknown[]) => void }).fbq === 'function') {
+                  (window as unknown as { fbq: (...args: unknown[]) => void }).fbq('track', 'Subscribe');
+                }
+                // Google Ads tracking
                 if (window.gtag) {
                   window.gtag('event', 'conversion', {
                     'send_to': 'AW-836775906/p0vGCJm3oaoBEOLfgI8D',
