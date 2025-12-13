@@ -5,11 +5,6 @@ import heroPuppet from "@/assets/imagens_webp/hero-puppet.webp";
 import rodrigoPuppets from "@/assets/imagens_webp/rodrigo-puppets.webp";
 import { WebGLShader } from "@/components/ui/web-gl-shader";
 
-declare global {
-  interface Window {
-    gtag?: (...args: any[]) => void;
-  }
-}
 
 const Hero = () => {
   // Google Ads conversion tracking
