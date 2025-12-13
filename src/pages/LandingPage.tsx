@@ -15,9 +15,17 @@ import {
 import { useToast } from "@/hooks/use-toast";
 import logoZucco from "@/assets/logo-zucco.png";
 
+const formatPhone = (value: string) => {
+  const numbers = value.replace(/\D/g, "");
+  if (numbers.length <= 2) return `(${numbers}`;
+  if (numbers.length <= 7) return `(${numbers.slice(0, 2)}) ${numbers.slice(2)}`;
+  if (numbers.length <= 11) return `(${numbers.slice(0, 2)}) ${numbers.slice(2, 7)}-${numbers.slice(7)}`;
+  return `(${numbers.slice(0, 2)}) ${numbers.slice(2, 7)}-${numbers.slice(7, 11)}`;
+};
+
 const formSchema = z.object({
   name: z.string().min(2, { message: "Nome deve ter pelo menos 2 caracteres" }),
-  phone: z.string().min(10, { message: "Telefone inválido" }),
+  phone: z.string().min(14, { message: "Telefone inválido" }),
   company: z.string().min(2, { message: "Empresa deve ter pelo menos 2 caracteres" }),
   email: z.string().email({ message: "Email inválido" }),
 });
@@ -128,7 +136,12 @@ const LandingPage = () => {
                     <FormControl>
                       <Input 
                         placeholder="(00) 00000-0000" 
-                        {...field} 
+                        {...field}
+                        onChange={(e) => {
+                          const formatted = formatPhone(e.target.value);
+                          field.onChange(formatted);
+                        }}
+                        maxLength={15}
                         className="bg-background"
                       />
                     </FormControl>
