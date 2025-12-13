@@ -226,13 +226,6 @@ const LandingPageV2 = () => {
               </div>
             </div>
 
-            {/* Mobile CTA Button */}
-            <button 
-              onClick={scrollToContact}
-              className="lg:hidden mt-2 bg-primary text-primary-foreground hover:bg-primary/90 text-sm font-medium py-3.5 px-8 rounded-full transition-all duration-200 shadow-lg shadow-primary/20 w-full sm:w-auto"
-            >
-              Solicitar Orçamento Grátis
-            </button>
           </div>
 
           {/* Right Content: Capture Form */}
