@@ -406,6 +406,104 @@ const LandingPageV2 = () => {
         </div>
       </section>
 
+      {/* Products Section */}
+      <section id="produtos" className="py-16 sm:py-20 lg:py-28 border-t border-border scroll-mt-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="mb-10 sm:mb-14 lg:mb-16 text-center">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-medium text-foreground tracking-tight mb-4 sm:mb-6">Nossos Produtos</h2>
+            <p className="text-base sm:text-lg font-light text-muted-foreground max-w-2xl mx-auto">Escolha a opção ideal para o seu projeto</p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6 lg:gap-8 max-w-5xl mx-auto">
+            {/* Card 1 - Fantoches Personalizados */}
+            <div className="relative group p-6 sm:p-8 rounded-2xl bg-card border border-border hover:border-primary/30 transition duration-300">
+              <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center mb-6 text-primary">
+                <Sparkles className="h-6 w-6" strokeWidth={1.5} />
+              </div>
+              
+              <h3 className="text-xl sm:text-2xl font-medium text-foreground mb-2 tracking-tight">Fantoches Personalizados</h3>
+              <p className="text-sm text-muted-foreground mb-6 font-light">Criação artesanal 100% exclusiva baseada na sua imaginação</p>
+              
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-center gap-2.5 text-sm text-muted-foreground">
+                  <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" strokeWidth={1.5} />
+                  <span>Meio corpo ou corpo inteiro.</span>
+                </li>
+                <li className="flex items-center gap-2.5 text-sm text-muted-foreground">
+                  <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" strokeWidth={1.5} />
+                  <span>Baseado em desenhos, logos, animações ou sua imaginação</span>
+                </li>
+                <li className="flex items-center gap-2.5 text-sm text-muted-foreground">
+                  <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" strokeWidth={1.5} />
+                  <span>100% personalizado com sua criatividade</span>
+                </li>
+                <li className="flex items-center gap-2.5 text-sm text-muted-foreground">
+                  <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" strokeWidth={1.5} />
+                  <span>Qualidade artesanal premium</span>
+                </li>
+              </ul>
+
+              <button 
+                onClick={scrollToContact}
+                className="w-full flex items-center justify-center gap-2 bg-primary text-primary-foreground hover:bg-primary/90 text-sm font-medium py-3 px-6 rounded-full transition-all duration-200 active:scale-[0.98]"
+              >
+                <span>Fale Conosco</span>
+                <ArrowRight className="h-4 w-4" strokeWidth={1.5} />
+              </button>
+            </div>
+
+            {/* Card 2 - Zucco IA Collection (Coming Soon) */}
+            <div className="relative p-6 sm:p-8 rounded-2xl bg-card border border-border opacity-60 grayscale pointer-events-none select-none">
+              {/* Badge Em Breve */}
+              <div className="absolute -top-3 right-4 sm:right-6">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-muted text-muted-foreground text-xs font-medium">
+                  <Sparkles className="h-3 w-3" strokeWidth={1.5} />
+                  Em Breve!
+                </span>
+              </div>
+
+              <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center mb-6 text-primary">
+                <Sparkles className="h-6 w-6" strokeWidth={1.5} />
+              </div>
+              
+              <h3 className="text-xl sm:text-2xl font-medium text-foreground mb-2 tracking-tight">Zucco IA Collection</h3>
+              <p className="text-sm text-muted-foreground mb-6 font-light">Transforme sua foto em um fantoche único usando Inteligência Artificial</p>
+              
+              <ul className="space-y-3 mb-8">
+                <li className="flex items-center gap-2.5 text-sm text-muted-foreground">
+                  <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" strokeWidth={1.5} />
+                  <span>Tamanho compacto ideal para presentes</span>
+                </li>
+                <li className="flex items-center gap-2.5 text-sm text-muted-foreground">
+                  <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" strokeWidth={1.5} />
+                  <span>Envie uma foto (apenas humanos, uma pessoa)</span>
+                </li>
+                <li className="flex items-center gap-2.5 text-sm text-muted-foreground">
+                  <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" strokeWidth={1.5} />
+                  <span>IA cria o design automaticamente</span>
+                </li>
+                <li className="flex items-center gap-2.5 text-sm text-muted-foreground">
+                  <CheckCircle className="h-4 w-4 text-primary flex-shrink-0" strokeWidth={1.5} />
+                  <span>Qualidade artesanal premium</span>
+                </li>
+              </ul>
+
+              <button 
+                disabled
+                className="w-full flex items-center justify-center gap-2 bg-muted text-muted-foreground text-sm font-medium py-3 px-6 rounded-full cursor-not-allowed"
+              >
+                <span>Em Breve</span>
+                <Sparkles className="h-4 w-4" strokeWidth={1.5} />
+              </button>
+            </div>
+          </div>
+
+          <p className="text-center text-xs sm:text-sm text-muted-foreground mt-8 sm:mt-12 font-light max-w-2xl mx-auto">
+            Ambos os produtos são produzidos com a <span className="underline decoration-primary/50">mesma qualidade</span> e <span className="underline decoration-primary/50">atenção aos detalhes</span> que fazem da Zucco Puppets referência há mais de 15 anos
+          </p>
+        </div>
+      </section>
+
       {/* Visual Showcase / CTA Strip */}
       <section id="processo" className="py-16 sm:py-20 lg:py-24 border-t border-border relative overflow-hidden scroll-mt-16">
         <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent"></div>
